@@ -554,7 +554,7 @@
                             <li>电机运行过程中受到负载扰动力矩影响，扰动由不同频率的正弦力矩扰动组成：
                                 $$T_d(t)=B_1\sin(2\pi f_{d1}t+\phi_{d1})+B_2\sin(2\pi f_{d2}t+\phi_{d2})$$
                                 使实际电机输出角度偏离期望轨迹，造成跟踪误差。</li>
-                            <li>电机机械系统存在非线性 LuGre 摩擦，包括静摩擦、库仑摩擦、Stribeck 效应和黏性摩擦，导致低速运动过程中出现非线性误差，影响角度跟踪性能。</li>
+                            <li>电机机械系统存在非线性 LuGre 摩擦，导致低速运动过程中出现非线性误差，影响角度跟踪性能。</li>
                             <li>控制系统中存在采样、计算和执行过程引起的时延，使控制输入不能及时作用于电机状态，降低系统响应速度并影响闭环稳定性。</li>
                         </ul>
 
@@ -579,9 +579,10 @@
 
                 <div class="tech-stack">
 
-                    <span>ROS</span>
-                    <span>C++</span>
-                    <span>Robot Control</span>
+                    <span>Simulink</span>
+                    <span>ADRC</span>
+                    <span>EKF</span>
+                    <span>非光滑控制器</span>
 
                 </div>
 
@@ -598,21 +599,21 @@
                 <div class="project-title-area">
 
                     <p class="project-index">
-                        Robot Manipulators / 01
+                        机械臂 / 01
                     </p>
 
                     <h2>
-                        Manipulator Project I
+                        冗余度机械臂无模型运动控制DRNN-SMC算法
                     </h2>
 
                     <p class="project-summary">
-                        Add a short description of your first manipulator project here.
+                        设计控制器实现机械臂雅可比矩阵估计和机械臂末端轨迹跟踪。
                     </p>
 
                 </div>
 
 
-                <div class="video-placeholder">
+                <!-- <div class="video-placeholder">
 
                     <p>
                         Project Video
@@ -622,31 +623,36 @@
                         Add your video here later
                     </span>
 
-                </div>
+                </div> -->
 
 
                 <div class="project-info-grid">
 
                     <div class="project-info-block">
 
-                        <h3>Background</h3>
+                        <h3>项目背景</h3>
 
-                        <p>
-                            Introduce the problem, application scenario and
-                            motivation of this project.
-                        </p>
+                        <ul>
+                            <li>基于模型的机械臂运动控制算法控制效果虽好但依赖于模型，而随着机械臂的使用，其关节可能出现磨损，导致模型不准确、控制精度下降。</li>
+                        </ul>
 
                     </div>
 
 
                     <div class="project-info-block">
 
-                        <h3>Main Work</h3>
+                        <h3>主要工作</h3>
 
                         <ul>
-                            <li>Add your first contribution.</li>
-                            <li>Add your second contribution.</li>
-                            <li>Add your third contribution.</li>
+                            <li>使用梯度神经网络（Gradient Nueral Network, GNN）设计公式，对机械臂雅可比矩阵进行估计。</li>
+                            <li>使用归零神经网络（Zeroing Nueral Network, ZNN）设计公式，实现机械臂末端对轨迹的跟踪。</li>
+                            <li>为提高抗干扰性能，在ZNN轨迹跟踪器的基础上，加入滑模控制（SMC），实现轨迹跟踪。</li>
+                            <!-- <li>
+                                论文：
+                                <a href="你的论文链接" target="_blank">
+                                    Paper Title: Active Inference Based LQR Control for Crane Systems
+                                </a>
+                            </li> -->
                         </ul>
 
                     </div>
@@ -656,9 +662,10 @@
 
                 <div class="tech-stack">
 
-                    <span>ROS</span>
-                    <span>C++</span>
-                    <span>Robot Control</span>
+                    <span>MATLAB</span>
+                    <span>ZNN</span>
+                    <span>GNN</span>
+                    <span>SMC</span>
 
                 </div>
 
@@ -675,21 +682,21 @@
                 <div class="project-title-area">
 
                     <p class="project-index">
-                        Robot Manipulators / 02
+                        机械臂 / 02
                     </p>
 
                     <h2>
-                        Manipulator Project II
+                        冗余度机械臂无模型运动控制DRNN-QN算法
                     </h2>
 
                     <p class="project-summary">
-                        Add a short description of your second manipulator project here.
+                        设计控制器实现机械臂雅可比矩阵估计和机械臂末端轨迹跟踪。
                     </p>
 
                 </div>
 
 
-                <div class="video-placeholder">
+                <!-- <div class="video-placeholder">
 
                     <p>
                         Project Video
@@ -699,30 +706,29 @@
                         Add your video here later
                     </span>
 
-                </div>
+                </div> -->
 
 
                 <div class="project-info-grid">
 
                     <div class="project-info-block">
 
-                        <h3>Background</h3>
+                        <h3>项目背景</h3>
 
-                        <p>
-                            Introduce the project scenario and technical problem here.
-                        </p>
+                        <ul>
+                            <li>基于模型的机械臂运动控制算法控制效果虽好但依赖于模型，而随着机械臂的使用，其关节可能出现磨损，导致模型不准确、控制精度下降。</li>
+                        </ul>
 
                     </div>
 
 
                     <div class="project-info-block">
 
-                        <h3>Main Work</h3>
+                        <h3>主要工作</h3>
 
                         <ul>
-                            <li>Add your first contribution.</li>
-                            <li>Add your second contribution.</li>
-                            <li>Add your third contribution.</li>
+                            <li>使用拟牛顿法（Quasi-Newton method, QN）思想，对机械臂雅可比矩阵进行估计。</li>
+                            <li>使用归零神经网络（Zeroing Nueral Network, ZNN）设计公式，实现机械臂末端对轨迹的跟踪。</li>
                         </ul>
 
                     </div>
@@ -732,9 +738,9 @@
 
                 <div class="tech-stack">
 
-                    <span>Python</span>
-                    <span>PyTorch</span>
-                    <span>Robot Learning</span>
+                    <span>MATLAB</span>
+                    <span>QN</span>
+                    <span>GNN</span>
 
                 </div>
 
