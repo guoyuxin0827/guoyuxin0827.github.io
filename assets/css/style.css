@@ -90,33 +90,44 @@ video {
 /* ==================== Hero ==================== */
 
 .hero {
-    min-height: 520px;
+    min-height: 350px;
 
     display: flex;
     align-items: center;
-    justify-content: center;
 
-    padding: 80px 24px;
+    padding: 55px 24px;
 
     background-color: #111827;
-
     color: white;
 }
 
 .hero-content {
     width: 100%;
-
     max-width: 1050px;
+
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 60px;
+}
+
+
+/* 左侧文字 */
+
+.hero-text {
+    flex: 1;
 }
 
 .hero-subtitle {
-    margin: 0 0 12px;
+    margin: 0 0 8px;
 
     text-transform: uppercase;
-
     letter-spacing: 3px;
 
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 700;
 
     color: #9ca3af;
@@ -125,41 +136,44 @@ video {
 .hero h1 {
     margin: 0;
 
-    font-size: clamp(54px, 8vw, 88px);
+    font-size: clamp(42px, 6vw, 62px);
 
     line-height: 1.05;
-
-    letter-spacing: -3px;
+    letter-spacing: -2px;
 }
 
 .hero-description {
-    max-width: 750px;
+    max-width: 650px;
 
-    margin-top: 26px;
-    margin-bottom: 38px;
+    margin-top: 18px;
+    margin-bottom: 26px;
 
-    font-size: 21px;
+    font-size: 18px;
 
     color: #d1d5db;
 }
+
+
+/* Hero 按钮 */
 
 .hero-buttons {
     display: flex;
     flex-wrap: wrap;
 
-    gap: 14px;
+    gap: 12px;
 }
 
 .button {
     display: inline-block;
 
-    padding: 13px 22px;
+    padding: 11px 19px;
 
     border-radius: 8px;
 
     text-decoration: none;
 
     font-weight: 600;
+    font-size: 14px;
 
     transition:
         transform 0.2s ease,
@@ -168,7 +182,6 @@ video {
 
 .primary-button {
     background-color: white;
-
     color: #111827;
 }
 
@@ -187,6 +200,27 @@ video {
 }
 
 
+/* 右侧照片 */
+
+.hero-photo {
+    flex-shrink: 0;
+}
+
+.hero-photo img {
+    width: 180px;
+    height: 180px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 4px solid rgba(255, 255, 255, 0.12);
+
+    box-shadow:
+        0 8px 30px rgba(0, 0, 0, 0.25);
+}
+
+
 /* ==================== Generic Section ==================== */
 
 .section {
@@ -194,11 +228,11 @@ video {
 
     margin: 0 auto;
 
-    padding: 80px 24px;
+    padding: 75px 24px;
 }
 
 .section-header {
-    margin-bottom: 36px;
+    margin-bottom: 34px;
 }
 
 .section-label {
@@ -216,10 +250,9 @@ video {
 .section-header h2 {
     margin: 0;
 
-    font-size: 38px;
+    font-size: 36px;
 
     letter-spacing: -1px;
-
     line-height: 1.2;
 }
 
@@ -239,7 +272,7 @@ video {
 
     margin: 0;
 
-    font-size: 19px;
+    font-size: 18px;
 
     color: #4b5563;
 }
@@ -252,7 +285,7 @@ video {
 .directory-section {
     background-color: #f6f7f9;
 
-    padding: 65px 24px;
+    padding: 60px 24px;
 }
 
 .directory-container {
@@ -262,7 +295,7 @@ video {
 }
 
 .directory-header {
-    margin-bottom: 30px;
+    margin-bottom: 28px;
 }
 
 .directory-header .section-label {
@@ -272,7 +305,7 @@ video {
 .directory-header h2 {
     margin: 0;
 
-    font-size: 38px;
+    font-size: 36px;
 
     line-height: 1.2;
 
@@ -284,7 +317,7 @@ video {
 
     color: #6b7280;
 
-    font-size: 16px;
+    font-size: 15px;
 }
 
 
@@ -441,8 +474,8 @@ a.directory-item p {
 }
 
 .project-list-header {
-    padding-top: 75px;
-    padding-bottom: 25px;
+    padding-top: 70px;
+    padding-bottom: 20px;
 }
 
 
@@ -465,14 +498,14 @@ a.directory-item p {
 
     margin: 0 auto;
 
-    padding: 80px 24px;
+    padding: 75px 24px;
 }
 
 
 /* ==================== Project Title ==================== */
 
 .project-title-area {
-    margin-bottom: 36px;
+    margin-bottom: 34px;
 }
 
 .project-index {
@@ -492,7 +525,7 @@ a.directory-item p {
 
     margin: 0 0 16px;
 
-    font-size: 40px;
+    font-size: 38px;
 
     line-height: 1.2;
 
@@ -504,7 +537,7 @@ a.directory-item p {
 
     margin: 0;
 
-    font-size: 18px;
+    font-size: 17px;
 
     color: #6b7280;
 }
@@ -519,7 +552,7 @@ a.directory-item p {
 
     aspect-ratio: 16 / 9;
 
-    margin: 0 auto 42px;
+    margin: 0 auto 40px;
 
     overflow: hidden;
 
@@ -560,7 +593,7 @@ a.directory-item p {
 
     aspect-ratio: 16 / 9;
 
-    margin: 0 auto 42px;
+    margin: 0 auto 40px;
 
     display: flex;
     flex-direction: column;
@@ -751,6 +784,8 @@ footer p {
 
 @media (max-width: 800px) {
 
+    /* Navigation */
+
     .nav-container {
         flex-direction: column;
 
@@ -769,31 +804,48 @@ footer p {
     /* Hero */
 
     .hero {
-        min-height: 450px;
+        min-height: auto;
+
+        padding: 48px 24px;
+    }
+
+    .hero-content {
+        flex-direction: column-reverse;
+
+        align-items: flex-start;
+
+        gap: 28px;
+    }
+
+    .hero-photo img {
+        width: 130px;
+        height: 130px;
     }
 
     .hero h1 {
+        font-size: 44px;
+
         letter-spacing: -2px;
     }
 
     .hero-description {
-        font-size: 18px;
+        font-size: 17px;
     }
 
 
     /* General */
 
     .section {
-        padding-top: 60px;
-        padding-bottom: 60px;
+        padding-top: 58px;
+        padding-bottom: 58px;
     }
 
 
     /* Directory */
 
     .directory-section {
-        padding-top: 55px;
-        padding-bottom: 55px;
+        padding-top: 52px;
+        padding-bottom: 52px;
     }
 
     .directory-row {
@@ -816,8 +868,8 @@ footer p {
     /* Projects */
 
     .project-detail-inner {
-        padding-top: 60px;
-        padding-bottom: 60px;
+        padding-top: 58px;
+        padding-bottom: 58px;
     }
 
     .project-title-area h2 {
@@ -845,18 +897,16 @@ footer p {
 @media (max-width: 500px) {
 
     .hero {
-        min-height: 410px;
-
-        padding-top: 60px;
-        padding-bottom: 60px;
+        padding-top: 42px;
+        padding-bottom: 42px;
     }
 
     .hero h1 {
-        font-size: 48px;
+        font-size: 42px;
     }
 
     .hero-description {
-        font-size: 17px;
+        font-size: 16px;
     }
 
     .hero-buttons {
@@ -865,18 +915,19 @@ footer p {
         align-items: flex-start;
     }
 
+    .hero-photo img {
+        width: 115px;
+        height: 115px;
+    }
+
     .section h2,
     .section-header h2,
     .directory-header h2 {
-        font-size: 31px;
-    }
-
-    .directory-item {
-        padding: 13px 14px;
+        font-size: 30px;
     }
 
     .project-title-area h2 {
-        font-size: 29px;
+        font-size: 28px;
     }
 
     .project-summary {
