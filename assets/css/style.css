@@ -723,6 +723,16 @@ a.directory-item p {
    Skills
    ========================================================= */
 
+/* 和前面的模块保持同样紧凑的间距 */
+#skills.section {
+    padding-top: 18px;
+    padding-bottom: 18px;
+}
+
+#skills .section-header {
+    margin-bottom: 12px;
+}
+
 .skills-grid {
     display: grid;
 
@@ -761,6 +771,16 @@ a.directory-item p {
 /* =========================================================
    Contact
    ========================================================= */
+
+/* 和前面的模块保持同样紧凑的间距 */
+#contact.section {
+    padding-top: 18px;
+    padding-bottom: 18px;
+}
+
+#contact .section-header {
+    margin-bottom: 12px;
+}
 
 .contact-section p {
     margin: 4px 0;
@@ -879,6 +899,12 @@ footer p {
 
     #about.section {
         padding-top: 20px;
+        padding-bottom: 16px;
+    }
+
+    #skills.section,
+    #contact.section {
+        padding-top: 16px;
         padding-bottom: 16px;
     }
 
