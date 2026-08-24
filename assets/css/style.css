@@ -26,9 +26,11 @@ body {
     line-height: 1.5;
 }
 
+
 a {
     color: inherit;
 }
+
 
 img,
 video {
@@ -41,24 +43,32 @@ video {
    ========================================================= */
 
 .navbar {
+
     position: sticky;
     top: 0;
+
     z-index: 1000;
 
-    background-color: rgba(255, 255, 255, 0.96);
+    background-color: rgba(255,255,255,0.96);
+
     border-bottom: 1px solid #e5e7eb;
 }
+
 
 .nav-container {
 
     width: 100%;
+
     max-width: 1100px;
 
     margin: 0 auto;
+
     padding: 12px 24px;
 
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
 }
 
@@ -66,6 +76,7 @@ video {
 .nav-logo {
 
     font-size: 18px;
+
     font-weight: 700;
 
     color: #20242a;
@@ -75,6 +86,7 @@ video {
 .nav-links {
 
     display: flex;
+
     gap: 26px;
 }
 
@@ -112,6 +124,7 @@ video {
 .hero-content {
 
     width: 100%;
+
     max-width: 1100px;
 
     margin: 0 auto;
@@ -154,7 +167,7 @@ video {
 
     margin: 0;
 
-    font-size: clamp(42px, 6vw, 60px);
+    font-size: clamp(42px,6vw,60px);
 
     line-height: 1.2;
 
@@ -171,6 +184,48 @@ video {
     font-size: 17px;
 
     color: #d1d5db;
+}
+
+
+.hero-buttons {
+
+    display: flex;
+
+    gap: 10px;
+
+    flex-wrap: wrap;
+}
+
+
+.button {
+
+    display: inline-block;
+
+    padding: 9px 17px;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+
+.primary-button {
+
+    background-color: white;
+
+    color: #111827;
+}
+
+
+.secondary-button {
+
+    border: 1px solid #4b5563;
+
+    color: white;
 }
 
 
@@ -207,7 +262,7 @@ video {
 
 
 /* =========================================================
-   Generic Section
+   Section
    ========================================================= */
 
 .section {
@@ -259,7 +314,6 @@ video {
    About
    ========================================================= */
 
-
 #about.section {
 
     padding-top: 22px;
@@ -275,8 +329,6 @@ video {
     margin: 0;
 
     font-size: 17px;
-
-    line-height: 1.5;
 
     color: #4b5563;
 }
@@ -328,6 +380,17 @@ video {
 }
 
 
+.directory-header p {
+
+    margin: 4px 0 0;
+
+    color: #6b7280;
+
+}
+
+
+/* Directory Row */
+
 .directory-row {
 
     display: grid;
@@ -342,8 +405,179 @@ video {
 }
 
 
+/* Category */
+
+.directory-category-title {
+
+    display: flex;
+
+    gap: 10px;
+
+    align-items: flex-start;
+}
+
+
+.directory-category-title span {
+
+    font-size: 12px;
+
+    color: #9ca3af;
+
+}
+
+
+.directory-category-title h3 {
+
+    margin: 0;
+
+    font-size: 16px;
+
+    line-height: 1.2;
+}
+
+
+
+/* Directory Projects */
+
+.directory-projects {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 8px;
+}
+
+
+
+a.directory-item {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+
+    min-height: 62px;
+
+
+    padding: 9px 13px;
+
+
+    background-color: white;
+
+
+    border: 1px solid #e2e5e9;
+
+
+    border-radius: 8px;
+
+
+    text-decoration: none;
+
+
+    color: #20242a;
+
+
+    transition:
+
+        transform 0.2s ease,
+
+        box-shadow 0.2s ease,
+
+        border-color 0.2s ease;
+}
+
+
+
+a.directory-item:hover {
+
+    transform: translateY(-2px);
+
+
+    border-color: #bfc5ce;
+
+
+    box-shadow:
+
+        0 6px 16px rgba(0,0,0,0.06);
+}
+
+
+
+.directory-item h4 {
+
+    margin: 0 0 2px;
+
+
+    font-size: 15px;
+
+
+    font-weight: 650;
+
+
+    line-height: 1.2;
+}
+
+
+
+.directory-item p {
+
+    margin: 0;
+
+
+    font-size: 12px;
+
+
+    line-height: 1.3;
+
+
+    color: #7a828e;
+}
+
+
+
+.directory-arrow {
+
+    flex-shrink: 0;
+
+
+    margin-left: 10px;
+
+
+    font-size: 18px;
+
+
+    color: #9ca3af;
+}
+
+
+
 /* =========================================================
-   Projects
+   Projects Section
+   ========================================================= */
+
+
+.projects-section {
+
+    background-color: white;
+}
+
+
+
+.project-list-header {
+
+    padding-top: 24px;
+
+    padding-bottom: 6px;
+}
+
+
+
+/* =========================================================
+   Project Detail
    ========================================================= */
 
 
@@ -351,22 +585,39 @@ video {
 
     scroll-margin-top: 80px;
 
+
     border-top: 1px solid #e5e7eb;
+
 
     background-color: white;
 }
+
+
+
+.project-detail.alternate {
+
+    background-color: #f8f9fb;
+}
+
 
 
 .project-detail-inner {
 
     width: 100%;
 
+
     max-width: 1100px;
+
 
     margin: 0 auto;
 
+
     padding: 12px 24px;
 }
+
+
+
+/* Project Title */
 
 
 .project-title-area {
@@ -375,34 +626,63 @@ video {
 }
 
 
-.project-title-area h2 {
 
-    margin: 0 0 7px;
+.project-index {
 
-    font-size: 34px;
-
-    line-height: 1.2;
-
-    letter-spacing: -1px;
-}
+    margin: 0 0 4px;
 
 
-.project-summary {
+    font-size: 12px;
 
-    margin: 0;
 
-    max-width: 760px;
+    letter-spacing: 1px;
 
-    font-size: 16px;
-
-    line-height: 1.45;
 
     color: #6b7280;
 }
 
 
+
+.project-title-area h2 {
+
+    max-width: 850px;
+
+
+    margin: 0 0 7px;
+
+
+    font-size: 34px;
+
+
+    line-height: 1.2;
+
+
+    letter-spacing: -1px;
+}
+
+
+
+.project-summary {
+
+    max-width: 760px;
+
+
+    margin: 0;
+
+
+    font-size: 16px;
+
+
+    line-height: 1.45;
+
+
+    color: #6b7280;
+}
+
+
+
 /* =========================================================
-   Project Video
+   Video
    ========================================================= */
 
 
@@ -410,27 +690,128 @@ video {
 
     width: 100%;
 
+
     aspect-ratio: 16 / 9;
+
 
     margin-bottom: 20px;
 
+
     overflow: hidden;
+
 
     background-color: #111827;
 
+
     border-radius: 12px;
+
+
+    box-shadow:
+
+        0 7px 22px rgba(0,0,0,0.07);
 }
+
 
 
 .video-container video {
 
     width: 100%;
 
+
     height: 100%;
+
 
     object-fit: contain;
 
+
+    background-color: #000;
 }
+
+
+
+.video-container .project-image {
+
+    width: 100%;
+
+
+    height: 100%;
+
+
+    object-fit: contain;
+
+
+    background-color: #111827;
+}
+
+
+
+/* Video Placeholder */
+
+
+.video-placeholder {
+
+    width: 100%;
+
+
+    aspect-ratio: 16 / 9;
+
+
+    margin-bottom: 20px;
+
+
+    display: flex;
+
+
+    flex-direction: column;
+
+
+    justify-content: center;
+
+
+    align-items: center;
+
+
+    background-color: #e9ecf1;
+
+
+    border: 1px solid #dfe3e8;
+
+
+    border-radius: 12px;
+
+
+    color: #6b7280;
+}
+
+
+
+.video-placeholder p {
+
+    margin: 0;
+
+
+    font-size: 19px;
+
+
+    font-weight: 600;
+
+
+    color: #374151;
+}
+
+
+
+.video-placeholder span {
+
+    margin-top: 3px;
+
+
+    font-size: 14px;
+
+
+    color: #8a919d;
+}
+
 
 
 /* =========================================================
@@ -444,22 +825,26 @@ video {
 
     display: block;
 
+
     margin-bottom: 14px;
 }
 
 
-/* 每个模块 */
 
 .project-info-block {
 
     margin-bottom: 20px;
 
+
     color: #555f6d;
+
 
     font-size: 16px;
 
+
     line-height: 1.55;
 }
+
 
 
 .project-info-block:last-child {
@@ -468,34 +853,43 @@ video {
 }
 
 
-/* 标题 */
 
 .project-info-block h3 {
 
     margin: 0 0 8px;
 
+
     font-size: 18px;
+
 
     font-weight: 700;
 
+
     line-height: 1.2;
+
 
     color: #20242a;
 }
 
 
-/* 普通文字 */
+
+/* 普通文本 */
+
 
 .project-info-block p {
 
     margin: 0;
 
+
     color: #555f6d;
+
 
     font-size: 16px;
 
+
     line-height: 1.55;
 }
+
 
 
 /* bullet */
@@ -504,32 +898,38 @@ video {
 
     margin: 0;
 
-    padding-left: 18px;
+
+    padding-left: 20px;
+
 
     list-style-position: outside;
-
 }
+
 
 
 .project-info-block li {
 
     margin-bottom: 6px;
 
+
     padding-left: 0;
+
 
     color: #555f6d;
 
+
     font-size: 16px;
+
 
     line-height: 1.55;
 }
+
 
 
 .project-info-block li:last-child {
 
     margin-bottom: 0;
 }
-
 
 /* =========================================================
    Tech Stack
@@ -539,28 +939,38 @@ video {
 
     display: flex;
 
+
     flex-wrap: wrap;
+
 
     gap: 7px;
 
+
     padding-top: 10px;
+
 
     border-top: 1px solid #e5e7eb;
 }
+
 
 
 .tech-stack span {
 
     padding: 5px 10px;
 
+
     border-radius: 999px;
+
 
     background-color: #eef0f3;
 
+
     font-size: 13px;
+
 
     color: #4b5563;
 }
+
 
 
 /* =========================================================
@@ -568,14 +978,14 @@ video {
    ========================================================= */
 
 
-/* 与前面模块保持一致 */
-
 #skills.section {
 
     padding-top: 18px;
 
+
     padding-bottom: 18px;
 }
+
 
 
 #skills .section-header {
@@ -584,49 +994,65 @@ video {
 }
 
 
+
 .skills-grid {
 
     display: grid;
 
+
     grid-template-columns:
+
         repeat(2, minmax(0, 1fr));
+
 
     gap: 12px;
 }
+
 
 
 .skill-card {
 
     padding: 17px;
 
+
     background-color: white;
+
 
     border: 1px solid #e5e7eb;
 
+
     border-radius: 10px;
 }
+
 
 
 .skill-card h3 {
 
     margin: 0 0 4px;
 
+
     font-size: 17px;
+
 
     line-height: 1.2;
 
+
     color: #20242a;
 }
+
 
 
 .skill-card p {
 
     margin: 0;
 
+
     line-height: 1.4;
+
 
     color: #6b7280;
 }
+
 
 
 /* =========================================================
@@ -634,14 +1060,14 @@ video {
    ========================================================= */
 
 
-/* 与前面模块保持一致 */
-
 #contact.section {
 
     padding-top: 18px;
 
+
     padding-bottom: 18px;
 }
+
 
 
 #contact .section-header {
@@ -650,47 +1076,59 @@ video {
 }
 
 
+
 .contact-section p {
 
     margin: 4px 0;
 
+
     font-size: 16px;
 
-    line-height: 1.4;
 
+    line-height: 1.4;
 }
+
 
 
 .contact-section a {
 
     color: #374151;
 
+
     text-decoration: underline;
+
 
     text-underline-offset: 3px;
 }
+
 
 
 /* =========================================================
    Footer
    ========================================================= */
 
+
 footer {
 
     padding: 24px;
 
+
     text-align: center;
+
 
     background-color: #111827;
 
+
     color: #9ca3af;
 }
+
 
 
 footer p {
 
     margin: 0;
 }
+
 
 
 /* =========================================================
@@ -725,8 +1163,8 @@ footer p {
 
         flex-direction: column;
 
-        gap: 9px;
 
+        gap: 9px;
     }
 
 
@@ -734,10 +1172,11 @@ footer p {
 
         flex-wrap: wrap;
 
+
         justify-content: center;
 
-        gap: 15px;
 
+        gap: 15px;
     }
 
 
@@ -747,7 +1186,6 @@ footer p {
     .hero {
 
         padding: 26px 0;
-
     }
 
 
@@ -755,10 +1193,11 @@ footer p {
 
         flex-direction: column-reverse;
 
+
         align-items: flex-start;
 
-        gap: 18px;
 
+        gap: 18px;
     }
 
 
@@ -766,10 +1205,11 @@ footer p {
 
         width: 110px;
 
+
         height: 110px;
 
-        flex-basis: 110px;
 
+        flex-basis: 110px;
     }
 
 
@@ -777,8 +1217,8 @@ footer p {
 
         max-width: 110px !important;
 
-        max-height: 110px !important;
 
+        max-height: 110px !important;
     }
 
 
@@ -786,8 +1226,8 @@ footer p {
 
         font-size: 42px;
 
-        line-height: 1.2;
 
+        line-height: 1.2;
     }
 
 
@@ -798,8 +1238,8 @@ footer p {
 
         padding-top: 26px;
 
-        padding-bottom: 26px;
 
+        padding-bottom: 26px;
     }
 
 
@@ -807,8 +1247,8 @@ footer p {
 
         padding-top: 20px;
 
-        padding-bottom: 16px;
 
+        padding-bottom: 16px;
     }
 
 
@@ -817,8 +1257,8 @@ footer p {
 
         padding-top: 16px;
 
-        padding-bottom: 16px;
 
+        padding-bottom: 16px;
     }
 
 
@@ -828,14 +1268,12 @@ footer p {
     .directory-section {
 
         padding: 20px 0;
-
     }
 
 
     #directory.directory-section {
 
         padding-top: 12px;
-
     }
 
 
@@ -843,17 +1281,17 @@ footer p {
 
         grid-template-columns: 1fr;
 
+
         gap: 8px;
 
-        padding: 10px 0;
 
+        padding: 10px 0;
     }
 
 
     .directory-projects {
 
         grid-template-columns: 1fr;
-
     }
 
 
@@ -864,8 +1302,8 @@ footer p {
 
         padding-top: 20px;
 
-        padding-bottom: 5px;
 
+        padding-bottom: 5px;
     }
 
 
@@ -873,8 +1311,8 @@ footer p {
 
         padding-top: 14px;
 
-        padding-bottom: 14px;
 
+        padding-bottom: 14px;
     }
 
 
@@ -882,22 +1320,20 @@ footer p {
 
         font-size: 30px;
 
-        line-height: 1.2;
 
+        line-height: 1.2;
     }
 
 
     .project-info-block {
 
         margin-bottom: 16px;
-
     }
 
 
     .project-info-block h3 {
 
         font-size: 17px;
-
     }
 
 
@@ -905,7 +1341,6 @@ footer p {
     .project-info-block li {
 
         font-size: 15px;
-
     }
 
 
@@ -915,7 +1350,6 @@ footer p {
     .skills-grid {
 
         grid-template-columns: 1fr;
-
     }
 
 }
@@ -938,8 +1372,8 @@ footer p {
 
         padding-left: 18px;
 
-        padding-right: 18px;
 
+        padding-right: 18px;
     }
 
 
@@ -948,8 +1382,8 @@ footer p {
 
         padding-top: 24px;
 
-        padding-bottom: 24px;
 
+        padding-bottom: 24px;
     }
 
 
@@ -957,15 +1391,14 @@ footer p {
 
         font-size: 39px;
 
-        line-height: 1.2;
 
+        line-height: 1.2;
     }
 
 
     .hero-description {
 
         font-size: 16px;
-
     }
 
 
@@ -973,10 +1406,11 @@ footer p {
 
         width: 95px;
 
+
         height: 95px;
 
-        flex-basis: 95px;
 
+        flex-basis: 95px;
     }
 
 
@@ -984,8 +1418,8 @@ footer p {
 
         max-width: 95px !important;
 
-        max-height: 95px !important;
 
+        max-height: 95px !important;
     }
 
 
@@ -996,24 +1430,24 @@ footer p {
 
         font-size: 28px;
 
-        line-height: 1.2;
 
+        line-height: 1.2;
     }
+
 
 
     .project-title-area h2 {
 
         font-size: 27px;
 
-        line-height: 1.2;
 
+        line-height: 1.2;
     }
 
 
     .project-summary {
 
         font-size: 16px;
-
     }
 
 }
