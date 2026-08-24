@@ -10,6 +10,7 @@ html {
 
 body {
     margin: 0;
+
     font-family:
         -apple-system,
         BlinkMacSystemFont,
@@ -19,6 +20,7 @@ body {
 
     background-color: #f6f7f9;
     color: #20242a;
+
     line-height: 1.7;
 }
 
@@ -37,16 +39,18 @@ video {
 .navbar {
     position: sticky;
     top: 0;
+
     z-index: 1000;
 
-    background-color: rgba(255, 255, 255, 0.94);
+    background-color: rgba(255, 255, 255, 0.96);
 
     border-bottom: 1px solid #e5e7eb;
 }
 
 .nav-container {
     max-width: 1100px;
-    margin: auto;
+
+    margin: 0 auto;
 
     padding: 16px 24px;
 
@@ -58,17 +62,24 @@ video {
 .nav-logo {
     font-size: 18px;
     font-weight: 700;
+
+    color: #20242a;
 }
 
 .nav-links {
     display: flex;
+
     gap: 28px;
 }
 
 .nav-links a {
     text-decoration: none;
+
     color: #4b5563;
+
     font-size: 15px;
+
+    transition: color 0.2s ease;
 }
 
 .nav-links a:hover {
@@ -88,11 +99,13 @@ video {
     padding: 80px 24px;
 
     background-color: #111827;
+
     color: white;
 }
 
 .hero-content {
     width: 100%;
+
     max-width: 1050px;
 }
 
@@ -100,6 +113,7 @@ video {
     margin: 0 0 12px;
 
     text-transform: uppercase;
+
     letter-spacing: 3px;
 
     font-size: 13px;
@@ -112,6 +126,7 @@ video {
     margin: 0;
 
     font-size: clamp(54px, 8vw, 88px);
+
     line-height: 1.05;
 
     letter-spacing: -3px;
@@ -124,6 +139,7 @@ video {
     margin-bottom: 38px;
 
     font-size: 21px;
+
     color: #d1d5db;
 }
 
@@ -142,13 +158,17 @@ video {
     border-radius: 8px;
 
     text-decoration: none;
+
     font-weight: 600;
 
-    transition: 0.2s;
+    transition:
+        transform 0.2s ease,
+        background-color 0.2s ease;
 }
 
 .primary-button {
     background-color: white;
+
     color: #111827;
 }
 
@@ -158,6 +178,7 @@ video {
 
 .secondary-button {
     border: 1px solid #4b5563;
+
     color: white;
 }
 
@@ -171,21 +192,22 @@ video {
 .section {
     max-width: 1100px;
 
-    margin: auto;
-    padding: 85px 24px;
+    margin: 0 auto;
+
+    padding: 80px 24px;
 }
 
 .section-header {
-    margin-bottom: 38px;
+    margin-bottom: 36px;
 }
 
 .section-label {
-    margin-bottom: 8px;
+    margin: 0 0 8px;
 
     font-size: 12px;
-    letter-spacing: 2px;
-
     font-weight: 700;
+
+    letter-spacing: 2px;
 
     color: #6b7280;
 }
@@ -195,7 +217,10 @@ video {
     margin: 0;
 
     font-size: 38px;
+
     letter-spacing: -1px;
+
+    line-height: 1.2;
 }
 
 .section-description {
@@ -212,36 +237,108 @@ video {
 .about-text {
     max-width: 800px;
 
+    margin: 0;
+
     font-size: 19px;
+
     color: #4b5563;
 }
 
 
-/* ==================== Compact Project Directory ==================== */
+/* ========================================================= */
+/* ==================== Project Directory ================== */
+/* ========================================================= */
 
 .directory-section {
-    padding-top: 70px;
-    padding-bottom: 60px;
+    background-color: #f6f7f9;
+
+    padding: 65px 24px;
 }
 
-.compact-header {
-    margin-bottom: 28px;
+.directory-container {
+    max-width: 1100px;
+
+    margin: 0 auto;
 }
 
-.directory-category {
+.directory-header {
     margin-bottom: 30px;
 }
 
-.directory-category h3 {
-    margin: 0 0 12px;
-
-    font-size: 16px;
-    font-weight: 700;
-
-    color: #4b5563;
+.directory-header .section-label {
+    margin-bottom: 7px;
 }
 
-.compact-directory-grid {
+.directory-header h2 {
+    margin: 0;
+
+    font-size: 38px;
+
+    line-height: 1.2;
+
+    letter-spacing: -1px;
+}
+
+.directory-header > p:last-child {
+    margin: 10px 0 0;
+
+    color: #6b7280;
+
+    font-size: 16px;
+}
+
+
+/* 每一个项目分类 */
+
+.directory-row {
+    display: grid;
+
+    grid-template-columns: 200px 1fr;
+
+    gap: 28px;
+
+    padding: 20px 0;
+
+    border-top: 1px solid #dfe3e8;
+}
+
+
+/* 左侧分类标题 */
+
+.directory-category-title {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 12px;
+
+    padding-top: 4px;
+}
+
+.directory-category-title span {
+    padding-top: 2px;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    color: #9ca3af;
+}
+
+.directory-category-title h3 {
+    margin: 0;
+
+    font-size: 17px;
+    font-weight: 650;
+
+    color: #20242a;
+
+    line-height: 1.4;
+}
+
+
+/* 右侧项目卡片区域 */
+
+.directory-projects {
     display: grid;
 
     grid-template-columns:
@@ -250,22 +347,28 @@ video {
     gap: 12px;
 }
 
-.compact-directory-card {
-    min-height: 90px;
 
+/* 项目卡片 */
+
+a.directory-item {
     display: flex;
+
     align-items: center;
     justify-content: space-between;
 
-    padding: 16px 18px;
+    min-height: 76px;
 
-    text-decoration: none;
-    color: inherit;
+    padding: 13px 17px;
 
     background-color: white;
 
-    border: 1px solid #e5e7eb;
-    border-radius: 10px;
+    border: 1px solid #e2e5e9;
+
+    border-radius: 9px;
+
+    text-decoration: none !important;
+
+    color: #20242a !important;
 
     transition:
         transform 0.2s ease,
@@ -273,50 +376,80 @@ video {
         border-color 0.2s ease;
 }
 
-.compact-directory-card:hover {
+a.directory-item:link,
+a.directory-item:visited,
+a.directory-item:hover,
+a.directory-item:active {
+    text-decoration: none !important;
+
+    color: #20242a !important;
+}
+
+a.directory-item:hover {
     transform: translateY(-2px);
 
-    border-color: #cfd4dc;
+    border-color: #bfc5ce;
 
     box-shadow:
-        0 6px 16px rgba(0, 0, 0, 0.06);
+        0 7px 18px rgba(0, 0, 0, 0.06);
 }
 
-.compact-directory-card h4 {
-    margin: 0 0 3px;
+a.directory-item h4 {
+    margin: 0 0 2px;
 
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 650;
+
+    line-height: 1.4;
+
+    color: #20242a;
+
+    text-decoration: none;
 }
 
-.compact-directory-card p {
+a.directory-item p {
     margin: 0;
 
-    font-size: 13px;
+    font-size: 12px;
 
-    color: #6b7280;
+    line-height: 1.4;
+
+    color: #7a828e;
+
+    text-decoration: none;
 }
 
-.compact-directory-card > span {
-    margin-left: 15px;
+.directory-arrow {
+    flex-shrink: 0;
 
-    font-size: 20px;
+    margin-left: 14px;
+
+    font-size: 18px;
 
     color: #9ca3af;
+
+    text-decoration: none;
 }
 
-/* ==================== Project Detail ==================== */
+
+/* ========================================================= */
+/* ==================== Project Details ==================== */
+/* ========================================================= */
 
 .projects-section {
     background-color: white;
 }
 
 .project-list-header {
-    padding-bottom: 20px;
+    padding-top: 75px;
+    padding-bottom: 25px;
 }
 
+
+/* 每个项目 */
+
 .project-detail {
-    scroll-margin-top: 85px;
+    scroll-margin-top: 82px;
 
     border-top: 1px solid #e5e7eb;
 
@@ -328,19 +461,22 @@ video {
 }
 
 .project-detail-inner {
-    max-width: 1100px;
+    max-width: 1000px;
 
-    margin: auto;
+    margin: 0 auto;
 
-    padding: 90px 24px;
+    padding: 80px 24px;
 }
 
+
+/* ==================== Project Title ==================== */
+
 .project-title-area {
-    margin-bottom: 42px;
+    margin-bottom: 36px;
 }
 
 .project-index {
-    margin-bottom: 10px;
+    margin: 0 0 9px;
 
     font-size: 13px;
 
@@ -352,14 +488,15 @@ video {
 }
 
 .project-title-area h2 {
-    margin: 0 0 18px;
-
     max-width: 850px;
 
-    font-size: 42px;
+    margin: 0 0 16px;
+
+    font-size: 40px;
 
     line-height: 1.2;
-    letter-spacing: -1.2px;
+
+    letter-spacing: -1.1px;
 }
 
 .project-summary {
@@ -373,32 +510,57 @@ video {
 }
 
 
-/* ==================== Video ==================== */
+/* ========================================================= */
+/* ==================== Project Video ====================== */
+/* ========================================================= */
 
 .video-container {
     width: 100%;
 
-    margin-bottom: 45px;
+    aspect-ratio: 16 / 9;
+
+    margin: 0 auto 42px;
 
     overflow: hidden;
 
     background-color: #111827;
 
     border-radius: 14px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.08);
 }
 
 .video-container video {
     width: 100%;
-    max-height: 600px;
+    height: 100%;
 
     object-fit: contain;
+
+    background-color: #000;
 }
+
+
+/* 如果暂时只有图片 */
+
+.video-container .project-image {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    background-color: #111827;
+}
+
+
+/* 暂时没有视频的项目 */
 
 .video-placeholder {
     width: 100%;
-    min-height: 430px;
 
-    margin-bottom: 45px;
+    aspect-ratio: 16 / 9;
+
+    margin: 0 auto 42px;
 
     display: flex;
     flex-direction: column;
@@ -406,9 +568,11 @@ video {
     align-items: center;
     justify-content: center;
 
-    border-radius: 14px;
-
     background-color: #e9ecf1;
+
+    border: 1px solid #dfe3e8;
+
+    border-radius: 14px;
 
     color: #6b7280;
 }
@@ -416,18 +580,24 @@ video {
 .video-placeholder p {
     margin: 0;
 
-    font-size: 22px;
+    font-size: 21px;
     font-weight: 600;
 
     color: #374151;
 }
 
 .video-placeholder span {
-    margin-top: 6px;
+    margin-top: 5px;
+
+    font-size: 14px;
+
+    color: #8a919d;
 }
 
 
-/* ==================== Project Information ==================== */
+/* ========================================================= */
+/* ==================== Project Information ================ */
+/* ========================================================= */
 
 .project-info-grid {
     display: grid;
@@ -435,16 +605,17 @@ video {
     grid-template-columns:
         repeat(2, minmax(0, 1fr));
 
-    gap: 55px;
+    gap: 50px;
 
-    margin-bottom: 32px;
+    margin-bottom: 30px;
 }
 
 .project-info-block h3 {
-    margin-top: 0;
-    margin-bottom: 12px;
+    margin: 0 0 11px;
 
     font-size: 18px;
+
+    color: #20242a;
 }
 
 .project-info-block p {
@@ -455,13 +626,14 @@ video {
 
 .project-info-block ul {
     margin: 0;
+
     padding-left: 20px;
 
     color: #555f6d;
 }
 
 .project-info-block li {
-    margin-bottom: 7px;
+    margin-bottom: 6px;
 }
 
 
@@ -472,15 +644,15 @@ video {
 
     flex-wrap: wrap;
 
-    gap: 10px;
+    gap: 9px;
 
-    padding-top: 24px;
+    padding-top: 23px;
 
     border-top: 1px solid #e5e7eb;
 }
 
 .tech-stack span {
-    padding: 7px 13px;
+    padding: 6px 12px;
 
     border-radius: 999px;
 
@@ -492,7 +664,9 @@ video {
 }
 
 
-/* ==================== Skills ==================== */
+/* ========================================================= */
+/* ==================== Skills ============================= */
+/* ========================================================= */
 
 .skills-grid {
     display: grid;
@@ -504,18 +678,19 @@ video {
 }
 
 .skill-card {
-    padding: 25px;
-
-    border-radius: 12px;
+    padding: 24px;
 
     background-color: white;
 
     border: 1px solid #e5e7eb;
+
+    border-radius: 12px;
 }
 
 .skill-card h3 {
-    margin-top: 0;
-    margin-bottom: 8px;
+    margin: 0 0 8px;
+
+    font-size: 18px;
 }
 
 .skill-card p {
@@ -525,7 +700,9 @@ video {
 }
 
 
-/* ==================== Contact ==================== */
+/* ========================================================= */
+/* ==================== Contact ============================ */
+/* ========================================================= */
 
 .contact-section p {
     font-size: 17px;
@@ -533,13 +710,17 @@ video {
 
 .contact-section a {
     color: #374151;
+
+    text-decoration: underline;
+
+    text-underline-offset: 3px;
 }
 
 
 /* ==================== Footer ==================== */
 
 footer {
-    padding: 35px 24px;
+    padding: 34px 24px;
 
     text-align: center;
 
@@ -553,23 +734,42 @@ footer p {
 }
 
 
-/* ==================== Responsive ==================== */
+/* ========================================================= */
+/* ==================== Responsive ========================= */
+/* ========================================================= */
+
+@media (max-width: 900px) {
+
+    .directory-row {
+        grid-template-columns: 170px 1fr;
+    }
+
+}
+
+
+/* ==================== Tablet / Mobile ==================== */
 
 @media (max-width: 800px) {
 
     .nav-container {
         flex-direction: column;
+
         gap: 12px;
     }
 
     .nav-links {
-        gap: 16px;
         flex-wrap: wrap;
+
         justify-content: center;
+
+        gap: 16px;
     }
 
+
+    /* Hero */
+
     .hero {
-        min-height: 460px;
+        min-height: 450px;
     }
 
     .hero h1 {
@@ -580,52 +780,112 @@ footer p {
         font-size: 18px;
     }
 
-    .directory-grid,
-    .single-card-grid,
-    .project-info-grid,
-    .skills-grid {
+
+    /* General */
+
+    .section {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+
+    /* Directory */
+
+    .directory-section {
+        padding-top: 55px;
+        padding-bottom: 55px;
+    }
+
+    .directory-row {
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+
+        padding: 18px 0;
+    }
+
+    .directory-category-title {
+        padding-top: 0;
+    }
+
+    .directory-projects {
         grid-template-columns: 1fr;
     }
 
-    .section {
-        padding-top: 65px;
-        padding-bottom: 65px;
-    }
+
+    /* Projects */
 
     .project-detail-inner {
-        padding-top: 65px;
-        padding-bottom: 65px;
+        padding-top: 60px;
+        padding-bottom: 60px;
     }
 
     .project-title-area h2 {
         font-size: 32px;
     }
 
-    .video-placeholder {
-        min-height: 260px;
+    .project-info-grid {
+        grid-template-columns: 1fr;
+
+        gap: 28px;
+    }
+
+
+    /* Skills */
+
+    .skills-grid {
+        grid-template-columns: 1fr;
     }
 
 }
 
 
+/* ==================== Small Mobile ==================== */
+
 @media (max-width: 500px) {
 
     .hero {
-        padding-top: 65px;
-        padding-bottom: 65px;
+        min-height: 410px;
+
+        padding-top: 60px;
+        padding-bottom: 60px;
     }
 
     .hero h1 {
         font-size: 48px;
     }
 
-    .section h2,
-    .section-header h2 {
-        font-size: 32px;
+    .hero-description {
+        font-size: 17px;
     }
 
-    .directory-card {
-        padding: 22px;
+    .hero-buttons {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .section h2,
+    .section-header h2,
+    .directory-header h2 {
+        font-size: 31px;
+    }
+
+    .directory-item {
+        padding: 13px 14px;
+    }
+
+    .project-title-area h2 {
+        font-size: 29px;
+    }
+
+    .project-summary {
+        font-size: 16px;
+    }
+
+    .project-detail-inner {
+        padding-left: 18px;
+        padding-right: 18px;
     }
 
 }
