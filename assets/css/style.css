@@ -647,24 +647,31 @@ a.directory-item p {
    ========================================================= */
 
 .project-info-grid {
-    display: grid;
 
-    grid-template-columns:
-        repeat(2, minmax(0, 1fr));
-
-    gap: 32px;
+    display: block;
 
     margin-bottom: 14px;
 }
 
 .project-info-block h3 {
-    margin: 0 0 5px;
 
-    font-size: 17px;
+    margin: 0 0 6px;
+
+    font-size: 18px;
 
     line-height: 1.2;
 
     color: #20242a;
+}
+
+.project-info-block {
+
+    margin-bottom: 18px;
+}
+
+.project-info-block:last-child {
+
+    margin-bottom: 0;
 }
 
 .project-info-block p {
