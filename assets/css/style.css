@@ -647,7 +647,7 @@ a.directory-item p {
    ========================================================= */
 
 
-/* Background + Main Work container */
+/* Single column layout */
 
 .project-info-grid {
 
@@ -657,7 +657,7 @@ a.directory-item p {
 }
 
 
-/* Each block */
+/* Each information block */
 
 .project-info-block {
 
@@ -677,7 +677,7 @@ a.directory-item p {
 }
 
 
-/* Titles */
+/* Section title */
 
 .project-info-block h3 {
 
@@ -693,7 +693,7 @@ a.directory-item p {
 }
 
 
-/* Paragraph */
+/* Text */
 
 .project-info-block p {
 
@@ -707,13 +707,24 @@ a.directory-item p {
 }
 
 
-/* List */
+/* Unified bullet list */
 
 .project-info-block ul {
 
     margin: 0;
 
-    padding-left: 22px;
+    padding-left: 18px;
+
+    list-style-position: outside;
+
+}
+
+
+.project-info-block li {
+
+    margin: 0 0 6px 0;
+
+    padding-left: 0;
 
     color: #555f6d;
 
@@ -723,21 +734,10 @@ a.directory-item p {
 }
 
 
-.project-info-block li {
-
-    margin-bottom: 6px;
-
-    padding-left: 2px;
-
-    color: #555f6d;
-}
-
-
 .project-info-block li:last-child {
 
     margin-bottom: 0;
 }
-
 
 /* =========================================================
    Tech Stack
