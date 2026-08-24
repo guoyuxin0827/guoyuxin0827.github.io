@@ -322,7 +322,7 @@
                         <source src="assets/videos/crane.mp4"
                                 type="video/mp4">
 
-                        Your browser does not support the video tag.
+                        <!-- Your browser does not support the video tag. -->
 
                     </video>
 
@@ -357,14 +357,50 @@
 
                     </div>
 
+                    <div class="project-info-block">
+
+                        <h3>主动推理控制</h3>
+                    
+                        <ul>
+                            <li>
+                                主动推理控制（Active Inference Control, AIC）
+                                基于自由能原理，将感知、状态估计和控制统一到同一优化框架中。
+                                与传统方法直接估计系统真实状态不同，主动推理通过构建信念（belief）
+                                描述智能体对外部世界状态的概率性认识。
+                            </li>
+                    
+                            <li>
+                                信念由生成模型（generative model）产生和更新。
+                                生成模型描述智能体对世界运行规律的内部预测，
+                                通过比较预测观测与实际观测之间的差异，不断修正自身belief，
+                                从而实现对环境状态的推断和不确定性的处理。
+                            </li>
+                    
+                            <li>
+                                主动推理的核心思想是通过最小化自由能，使内部信念与外部世界保持一致。
+                                智能体不仅可以通过改变自己的belief来适应世界，
+                                也可以通过采取行动改变环境，使外部状态符合自身期望，
+                                即“改变想法（change beliefs）”与“改变世界（change the world）”。
+                            </li>
+                    
+                            <li>
+                                相比传统控制方法依赖确定性的状态反馈，
+                                主动推理能够显式表示状态不确定性，并在部分观测和复杂环境下进行推断。
+                                相比强化学习方法，其不依赖大量环境交互学习策略，具有更强的可解释性，
+                                但性能依赖生成模型的准确性以及自由能优化过程。
+                            </li>
+                        </ul>
+                    
+                    </div>
+
                 </div>
 
 
                 <div class="tech-stack">
 
                     <span>MATLAB</span>
-                    <span>Control Theory</span>
-                    <span>Active Inference</span>
+                    <span>Gazebo</span>
+                    <span>Active Inference Control</span>
                     <span>LQR</span>
 
                 </div>
@@ -382,22 +418,21 @@
                 <div class="project-title-area">
 
                     <p class="project-index">
-                        Crane Systems / 02
+                        吊机系统 / 02
                     </p>
 
                     <h2>
-                        Reinforcement Learning Crane Control
+                        基于主动推理的强化学习无人机吊装控制
                     </h2>
 
                     <p class="project-summary">
-                        Learning-based crane control for positioning and
-                        payload oscillation suppression.
+                        针对视觉遮挡的POMDP问题，基于自由能原理，构建世界模型，完成无人机吊装系统探索及下放任务。
                     </p>
 
                 </div>
 
 
-                <div class="video-placeholder">
+                <!-- <div class="video-placeholder">
 
                     <p>
                         Project Video
@@ -407,33 +442,35 @@
                         Add your video here later
                     </span>
 
-                </div>
+                </div> -->
 
 
                 <div class="project-info-grid">
 
                     <div class="project-info-block">
 
-                        <h3>Background</h3>
+                        <h3>项目背景</h3>
 
-                        <p>
-                            This project investigates intelligent control methods
-                            for crane systems under nonlinear dynamics and
-                            partially observable conditions.
-                        </p>
+                        <ul>
+                            <li>无人机吊装任务通常需要根据环境信息完成目标区域搜索、位置调整以及负载释放，但在实际应用中，由于负载遮挡、视角限制以及环境不确定性，智能体难以获得完整准确的环境状态信息。</li>
+                            <li>传统强化学习方法通常依赖环境奖励进行策略优化，在部分观测和稀疏奖励场景下存在探索效率低、收敛困难以及缺乏环境不确定性建模能力的问题。</li>
+                            <li>自由能原理认为智能体可以通过不断更新对环境的信念状态，并主动获取有价值的信息降低不确定性，从而实现更加高效的感知与决策。</li>
+                            <li>因此，本项目针对无人机吊装中的部分观测问题，引入基于自由能原理的主动推理思想，结合世界模型与强化学习方法，实现无人机主动探索、目标定位以及安全下放。</li>
+                        </ul>
 
                     </div>
 
 
                     <div class="project-info-block">
 
-                        <h3>Main Work</h3>
+                        <h3>主要工作</h3>
 
                         <ul>
-                            <li>Designed the continuous control environment.</li>
-                            <li>Constructed learning-based control objectives.</li>
-                            <li>Implemented actor-critic reinforcement learning.</li>
-                            <li>Evaluated positioning and anti-sway performance.</li>
+                            <li>搭建无人机吊装仿真环境，建立无人机运动模型、视觉观测模型以及连续控制模型，模拟负载遮挡导致的目标不可见和部分可见情况，实现部分观测任务场景构建。</li>
+                            <li>将无人机吊装任务建模为POMDP问题，设计状态表示、动作空间、观测空间以及任务奖励函数，为强化学习策略训练提供交互环境。</li>
+                            <li>构建基于变分推断的递归信念世界模型，通过Prior模型预测隐状态先验分布，通过Posterior模型结合当前观测更新隐状态后验分布，实现对不可观测状态的概率估计。</li>
+                            <li>利用后验分布与先验分布之间的KL散度计算信息增益，将环境不确定性的降低过程引入强化学习目标，引导智能体主动选择具有信息价值的探索动作。</li>
+                            <li>基于SAC Actor-Critic框架设计策略优化方法，使智能体在belief状态空间中学习长期决策策略，实现目标搜索、位置对准和自主下放。</li>
                         </ul>
 
                     </div>
@@ -447,6 +484,7 @@
                     <span>PyTorch</span>
                     <span>Reinforcement Learning</span>
                     <span>SAC</span>
+                    <span>World Model</span>
 
                 </div>
 
