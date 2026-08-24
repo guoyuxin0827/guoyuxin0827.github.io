@@ -93,3 +93,49 @@ footer {
     margin: 20px 0;
     background: black;
 }
+
+.project-category {
+    margin-bottom: 50px;
+}
+
+.project-category h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.directory-card {
+    background-color: white;
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.directory-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.directory-card h4 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.directory-card p {
+    margin: 0;
+    color: #555;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+}
