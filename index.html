@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Guo Yuxin | Portfolio</title>
 
     <link rel="stylesheet" href="assets/css/style.css">
@@ -11,105 +12,921 @@
 
 <body>
 
-<nav>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#skills">Skills</a>
-    <a href="#contact">Contact</a>
-</nav>
+    <!-- ==================== Navigation ==================== -->
+    <nav class="navbar">
+        <div class="nav-container">
 
-<header>
-    <h1>Guo Yuxin</h1>
-    <p>Robot Control · Control Algorithms · Reinforcement Learning</p>
-</header>
-
-<section id="about">
-    <h2>About Me</h2>
-
-    <p>
-        I am interested in robot control, autonomous systems,
-        active inference and reinforcement learning.
-    </p>
-</section>
-
-<section id="projects">
-    <h2>Project Directory</h2>
-
-    <div class="project-category">
-        <h3>吊装系统</h3>
-        <div class="project-grid">
-            <div class="directory-card">
-                <h4>项目一</h4>
-                <p>吊装系统项目简介</p>
+            <div class="nav-logo">
+                Guo Yuxin
             </div>
 
-            <div class="directory-card">
-                <h4>项目二</h4>
-                <p>吊装系统项目简介</p>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#directory">Projects</a>
+                <a href="#skills">Skills</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+        </div>
+    </nav>
+
+
+    <!-- ==================== Hero ==================== -->
+    <header class="hero">
+
+        <div class="hero-content">
+
+            <p class="hero-subtitle">
+                Portfolio
+            </p>
+
+            <h1>Guo Yuxin</h1>
+
+            <p class="hero-description">
+                Robot Control · Control Algorithms · Reinforcement Learning
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#directory" class="button primary-button">
+                    View Projects
+                </a>
+
+                <a href="#contact" class="button secondary-button">
+                    Contact
+                </a>
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- ==================== About ==================== -->
+    <section id="about" class="section">
+
+        <div class="section-header">
+            <p class="section-label">ABOUT</p>
+            <h2>About Me</h2>
+        </div>
+
+        <p class="about-text">
+            I am interested in robot control, autonomous systems,
+            active inference, reinforcement learning and intelligent robotic systems.
+            This website presents selected projects in crane systems,
+            robotic manipulators, UAVs and embedded systems.
+        </p>
+
+    </section>
+
+
+    <!-- ==================== Project Directory ==================== -->
+    <section id="directory" class="section">
+
+        <div class="section-header">
+            <p class="section-label">PORTFOLIO</p>
+            <h2>Project Directory</h2>
+
+            <p class="section-description">
+                Select a project to jump directly to its introduction and demo.
+            </p>
+        </div>
+
+
+        <!-- Crane Systems -->
+        <div class="project-category">
+
+            <h3 class="category-title">01 · Crane Systems</h3>
+
+            <div class="directory-grid">
+
+                <a href="#crane-aic" class="directory-link">
+                    <div class="directory-card">
+
+                        <span class="card-number">01</span>
+
+                        <h4>
+                            Active Inference Crane Control
+                        </h4>
+
+                        <p>
+                            Active inference and LQR based anti-sway control.
+                        </p>
+
+                        <span class="view-project">
+                            View Project →
+                        </span>
+
+                    </div>
+                </a>
+
+
+                <a href="#crane-rl" class="directory-link">
+                    <div class="directory-card">
+
+                        <span class="card-number">02</span>
+
+                        <h4>
+                            Reinforcement Learning Crane Control
+                        </h4>
+
+                        <p>
+                            Learning-based control under complex system dynamics.
+                        </p>
+
+                        <span class="view-project">
+                            View Project →
+                        </span>
+
+                    </div>
+                </a>
+
             </div>
         </div>
-    </div>
 
-    <div class="project-category">
-        <h3>机械臂</h3>
-        <div class="project-grid">
-            <div class="directory-card">
-                <h4>项目一</h4>
-                <p>机械臂项目简介</p>
-            </div>
 
-            <div class="directory-card">
-                <h4>项目二</h4>
-                <p>机械臂项目简介</p>
+        <!-- Robot Manipulators -->
+        <div class="project-category">
+
+            <h3 class="category-title">02 · Robot Manipulators</h3>
+
+            <div class="directory-grid">
+
+                <a href="#arm-project-1" class="directory-link">
+                    <div class="directory-card">
+
+                        <span class="card-number">01</span>
+
+                        <h4>
+                            Manipulator Project I
+                        </h4>
+
+                        <p>
+                            Robotic manipulation, motion control and planning.
+                        </p>
+
+                        <span class="view-project">
+                            View Project →
+                        </span>
+
+                    </div>
+                </a>
+
+
+                <a href="#arm-project-2" class="directory-link">
+                    <div class="directory-card">
+
+                        <span class="card-number">02</span>
+
+                        <h4>
+                            Manipulator Project II
+                        </h4>
+
+                        <p>
+                            Intelligent manipulation and robotic control.
+                        </p>
+
+                        <span class="view-project">
+                            View Project →
+                        </span>
+
+                    </div>
+                </a>
+
             </div>
         </div>
-    </div>
 
-    <div class="project-category">
-        <h3>无人机</h3>
-        <div class="project-grid">
-            <div class="directory-card">
-                <h4>旋翼无人机</h4>
-                <p>多旋翼建模、控制、规划等相关项目</p>
-            </div>
 
-            <div class="directory-card">
-                <h4>固定翼无人机</h4>
-                <p>固定翼建模、性能分析与控制相关项目</p>
+        <!-- UAV -->
+        <div class="project-category">
+
+            <h3 class="category-title">03 · UAV</h3>
+
+            <div class="directory-grid">
+
+                <a href="#uav-rotary" class="directory-link">
+                    <div class="directory-card">
+
+                        <span class="card-number">01</span>
+
+                        <h4>
+                            Rotary-Wing UAV
+                        </h4>
+
+                        <p>
+                            Modeling, control and autonomous planning for multirotor UAVs.
+                        </p>
+
+                        <span class="view-project">
+                            View Project →
+                        </span>
+
+                    </div>
+                </a>
+
+
+                <a href="#uav-fixed" class="directory-link">
+                    <div class="directory-card">
+
+                        <span class="card-number">02</span>
+
+                        <h4>
+                            Fixed-Wing UAV
+                        </h4>
+
+                        <p>
+                            Aircraft modeling, performance analysis and flight control.
+                        </p>
+
+                        <span class="view-project">
+                            View Project →
+                        </span>
+
+                    </div>
+                </a>
+
             </div>
         </div>
-    </div>
 
-    <div class="project-category">
-        <h3>嵌入式小车</h3>
-        <div class="project-grid">
-            <div class="directory-card">
-                <h4>Embedded Vehicle</h4>
-                <p>嵌入式控制、传感器与运动控制相关项目</p>
+
+        <!-- Embedded Vehicle -->
+        <div class="project-category">
+
+            <h3 class="category-title">04 · Embedded Vehicle</h3>
+
+            <div class="directory-grid single-card-grid">
+
+                <a href="#embedded-car" class="directory-link">
+                    <div class="directory-card">
+
+                        <span class="card-number">01</span>
+
+                        <h4>
+                            Embedded Autonomous Vehicle
+                        </h4>
+
+                        <p>
+                            Embedded control, sensors and autonomous vehicle development.
+                        </p>
+
+                        <span class="view-project">
+                            View Project →
+                        </span>
+
+                    </div>
+                </a>
+
             </div>
         </div>
-    </div>
-</section>
 
-<section id="skills">
-    <h2>Skills</h2>
+    </section>
 
-    <p>
-        C++ · Python · MATLAB · ROS · PyTorch · Gazebo
-    </p>
-</section>
 
-<section id="contact">
-    <h2>Contact</h2>
+    <!-- ========================================================= -->
+    <!-- ==================== Project Details ===================== -->
+    <!-- ========================================================= -->
 
-    <p>
-        GitHub: Your GitHub Username
-    </p>
-</section>
+    <section class="projects-section">
 
-<footer>
-    <p>© 2026 Guo Yuxin</p>
-</footer>
+        <div class="section project-list-header">
+
+            <div class="section-header">
+                <p class="section-label">SELECTED WORK</p>
+                <h2>Projects</h2>
+            </div>
+
+        </div>
+
+
+        <!-- ==================== Crane Project 1 ==================== -->
+        <article id="crane-aic" class="project-detail">
+
+            <div class="project-detail-inner">
+
+                <div class="project-title-area">
+
+                    <p class="project-index">
+                        Crane Systems / 01
+                    </p>
+
+                    <h2>
+                        Active Inference LQR Crane Control
+                    </h2>
+
+                    <p class="project-summary">
+                        Anti-sway and positioning control for crane systems based
+                        on active inference and optimal control.
+                    </p>
+
+                </div>
+
+
+                <div class="video-container">
+
+                    <video controls preload="metadata"
+                           poster="assets/images/crane.png">
+
+                        <source src="assets/videos/crane.mp4"
+                                type="video/mp4">
+
+                        Your browser does not support the video tag.
+
+                    </video>
+
+                </div>
+
+
+                <div class="project-info-grid">
+
+                    <div class="project-info-block">
+
+                        <h3>Background</h3>
+
+                        <p>
+                            Crane systems are underactuated and strongly coupled.
+                            Payload oscillation can reduce transportation efficiency
+                            and make accurate positioning difficult.
+                        </p>
+
+                    </div>
+
+
+                    <div class="project-info-block">
+
+                        <h3>Main Work</h3>
+
+                        <ul>
+                            <li>Established the dynamic model of the crane system.</li>
+                            <li>Designed an active inference based control framework.</li>
+                            <li>Integrated LQR into the controller design.</li>
+                            <li>Evaluated positioning and anti-sway performance.</li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+
+                <div class="tech-stack">
+
+                    <span>MATLAB</span>
+                    <span>Control Theory</span>
+                    <span>Active Inference</span>
+                    <span>LQR</span>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- ==================== Crane Project 2 ==================== -->
+        <article id="crane-rl" class="project-detail alternate">
+
+            <div class="project-detail-inner">
+
+                <div class="project-title-area">
+
+                    <p class="project-index">
+                        Crane Systems / 02
+                    </p>
+
+                    <h2>
+                        Reinforcement Learning Crane Control
+                    </h2>
+
+                    <p class="project-summary">
+                        Learning-based crane control for positioning and
+                        payload oscillation suppression.
+                    </p>
+
+                </div>
+
+
+                <div class="video-placeholder">
+
+                    <p>
+                        Project Video
+                    </p>
+
+                    <span>
+                        Add your video here later
+                    </span>
+
+                </div>
+
+
+                <div class="project-info-grid">
+
+                    <div class="project-info-block">
+
+                        <h3>Background</h3>
+
+                        <p>
+                            This project investigates intelligent control methods
+                            for crane systems under nonlinear dynamics and
+                            partially observable conditions.
+                        </p>
+
+                    </div>
+
+
+                    <div class="project-info-block">
+
+                        <h3>Main Work</h3>
+
+                        <ul>
+                            <li>Designed the continuous control environment.</li>
+                            <li>Constructed learning-based control objectives.</li>
+                            <li>Implemented actor-critic reinforcement learning.</li>
+                            <li>Evaluated positioning and anti-sway performance.</li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+
+                <div class="tech-stack">
+
+                    <span>Python</span>
+                    <span>PyTorch</span>
+                    <span>Reinforcement Learning</span>
+                    <span>SAC</span>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- ==================== Manipulator Project 1 ==================== -->
+        <article id="arm-project-1" class="project-detail">
+
+            <div class="project-detail-inner">
+
+                <div class="project-title-area">
+
+                    <p class="project-index">
+                        Robot Manipulators / 01
+                    </p>
+
+                    <h2>
+                        Manipulator Project I
+                    </h2>
+
+                    <p class="project-summary">
+                        Add a short description of your first manipulator project here.
+                    </p>
+
+                </div>
+
+
+                <div class="video-placeholder">
+
+                    <p>
+                        Project Video
+                    </p>
+
+                    <span>
+                        Add your video here later
+                    </span>
+
+                </div>
+
+
+                <div class="project-info-grid">
+
+                    <div class="project-info-block">
+
+                        <h3>Background</h3>
+
+                        <p>
+                            Introduce the problem, application scenario and
+                            motivation of this project.
+                        </p>
+
+                    </div>
+
+
+                    <div class="project-info-block">
+
+                        <h3>Main Work</h3>
+
+                        <ul>
+                            <li>Add your first contribution.</li>
+                            <li>Add your second contribution.</li>
+                            <li>Add your third contribution.</li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+
+                <div class="tech-stack">
+
+                    <span>ROS</span>
+                    <span>C++</span>
+                    <span>Robot Control</span>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- ==================== Manipulator Project 2 ==================== -->
+        <article id="arm-project-2" class="project-detail alternate">
+
+            <div class="project-detail-inner">
+
+                <div class="project-title-area">
+
+                    <p class="project-index">
+                        Robot Manipulators / 02
+                    </p>
+
+                    <h2>
+                        Manipulator Project II
+                    </h2>
+
+                    <p class="project-summary">
+                        Add a short description of your second manipulator project here.
+                    </p>
+
+                </div>
+
+
+                <div class="video-placeholder">
+
+                    <p>
+                        Project Video
+                    </p>
+
+                    <span>
+                        Add your video here later
+                    </span>
+
+                </div>
+
+
+                <div class="project-info-grid">
+
+                    <div class="project-info-block">
+
+                        <h3>Background</h3>
+
+                        <p>
+                            Introduce the project scenario and technical problem here.
+                        </p>
+
+                    </div>
+
+
+                    <div class="project-info-block">
+
+                        <h3>Main Work</h3>
+
+                        <ul>
+                            <li>Add your first contribution.</li>
+                            <li>Add your second contribution.</li>
+                            <li>Add your third contribution.</li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+
+                <div class="tech-stack">
+
+                    <span>Python</span>
+                    <span>PyTorch</span>
+                    <span>Robot Learning</span>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- ==================== Rotary UAV ==================== -->
+        <article id="uav-rotary" class="project-detail">
+
+            <div class="project-detail-inner">
+
+                <div class="project-title-area">
+
+                    <p class="project-index">
+                        UAV / 01
+                    </p>
+
+                    <h2>
+                        Rotary-Wing UAV
+                    </h2>
+
+                    <p class="project-summary">
+                        Modeling, control, trajectory planning and autonomous
+                        operation for multirotor UAV systems.
+                    </p>
+
+                </div>
+
+
+                <div class="video-placeholder">
+
+                    <p>
+                        Project Video
+                    </p>
+
+                    <span>
+                        Add your video here later
+                    </span>
+
+                </div>
+
+
+                <div class="project-info-grid">
+
+                    <div class="project-info-block">
+
+                        <h3>Background</h3>
+
+                        <p>
+                            This project focuses on autonomous multirotor UAV
+                            modeling, control and trajectory planning.
+                        </p>
+
+                    </div>
+
+
+                    <div class="project-info-block">
+
+                        <h3>Main Work</h3>
+
+                        <ul>
+                            <li>Established the UAV dynamic model.</li>
+                            <li>Designed trajectory planning and control algorithms.</li>
+                            <li>Conducted simulation and performance evaluation.</li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+
+                <div class="tech-stack">
+
+                    <span>MATLAB</span>
+                    <span>Python</span>
+                    <span>UAV</span>
+                    <span>Trajectory Planning</span>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- ==================== Fixed Wing UAV ==================== -->
+        <article id="uav-fixed" class="project-detail alternate">
+
+            <div class="project-detail-inner">
+
+                <div class="project-title-area">
+
+                    <p class="project-index">
+                        UAV / 02
+                    </p>
+
+                    <h2>
+                        Fixed-Wing UAV
+                    </h2>
+
+                    <p class="project-summary">
+                        Fixed-wing aircraft modeling, performance analysis
+                        and flight-control related work.
+                    </p>
+
+                </div>
+
+
+                <div class="video-placeholder">
+
+                    <p>
+                        Project Video
+                    </p>
+
+                    <span>
+                        Add your video here later
+                    </span>
+
+                </div>
+
+
+                <div class="project-info-grid">
+
+                    <div class="project-info-block">
+
+                        <h3>Background</h3>
+
+                        <p>
+                            This project focuses on modeling and analysis of
+                            fixed-wing aircraft dynamics and flight performance.
+                        </p>
+
+                    </div>
+
+
+                    <div class="project-info-block">
+
+                        <h3>Main Work</h3>
+
+                        <ul>
+                            <li>Established the aircraft mathematical model.</li>
+                            <li>Analyzed aerodynamic and flight performance.</li>
+                            <li>Conducted control and simulation analysis.</li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+
+                <div class="tech-stack">
+
+                    <span>MATLAB</span>
+                    <span>Flight Dynamics</span>
+                    <span>Aircraft Modeling</span>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- ==================== Embedded Car ==================== -->
+        <article id="embedded-car" class="project-detail">
+
+            <div class="project-detail-inner">
+
+                <div class="project-title-area">
+
+                    <p class="project-index">
+                        Embedded Vehicle / 01
+                    </p>
+
+                    <h2>
+                        Embedded Autonomous Vehicle
+                    </h2>
+
+                    <p class="project-summary">
+                        Embedded system development for sensing,
+                        vehicle control and autonomous operation.
+                    </p>
+
+                </div>
+
+
+                <div class="video-placeholder">
+
+                    <p>
+                        Project Video
+                    </p>
+
+                    <span>
+                        Add your video here later
+                    </span>
+
+                </div>
+
+
+                <div class="project-info-grid">
+
+                    <div class="project-info-block">
+
+                        <h3>Background</h3>
+
+                        <p>
+                            Introduce the embedded vehicle platform,
+                            application scenario and project objective here.
+                        </p>
+
+                    </div>
+
+
+                    <div class="project-info-block">
+
+                        <h3>Main Work</h3>
+
+                        <ul>
+                            <li>Designed embedded control software.</li>
+                            <li>Integrated sensors and actuators.</li>
+                            <li>Implemented vehicle motion control.</li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+
+                <div class="tech-stack">
+
+                    <span>C</span>
+                    <span>C++</span>
+                    <span>Embedded Systems</span>
+                    <span>Control</span>
+
+                </div>
+
+            </div>
+
+        </article>
+
+    </section>
+
+
+    <!-- ==================== Skills ==================== -->
+    <section id="skills" class="section">
+
+        <div class="section-header">
+            <p class="section-label">TECHNOLOGY</p>
+            <h2>Skills</h2>
+        </div>
+
+        <div class="skills-grid">
+
+            <div class="skill-card">
+                <h3>Programming</h3>
+                <p>
+                    C · C++ · Python · MATLAB
+                </p>
+            </div>
+
+            <div class="skill-card">
+                <h3>Robotics</h3>
+                <p>
+                    ROS · Gazebo · Robot Modeling · Motion Control
+                </p>
+            </div>
+
+            <div class="skill-card">
+                <h3>Control</h3>
+                <p>
+                    LQR · MPC · Active Inference · State Estimation
+                </p>
+            </div>
+
+            <div class="skill-card">
+                <h3>Learning</h3>
+                <p>
+                    PyTorch · Reinforcement Learning · Actor-Critic · SAC
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==================== Contact ==================== -->
+    <section id="contact" class="section contact-section">
+
+        <div class="section-header">
+            <p class="section-label">CONTACT</p>
+            <h2>Get in Touch</h2>
+        </div>
+
+        <p>
+            GitHub:
+            <a href="https://github.com/YOUR_USERNAME"
+               target="_blank">
+                github.com/YOUR_USERNAME
+            </a>
+        </p>
+
+        <p>
+            Email:
+            your_email@example.com
+        </p>
+
+    </section>
+
+
+    <!-- ==================== Footer ==================== -->
+    <footer>
+
+        <p>
+            © 2026 Guo Yuxin
+        </p>
+
+    </footer>
 
 </body>
 
