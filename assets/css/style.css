@@ -103,7 +103,7 @@ video {
 
 .hero-content {
     width: 100%;
-    max-width: 1050px;
+    max-width: 1100px;
 
     margin: 0 auto;
 
@@ -235,7 +235,7 @@ video {
 
     margin: 0 auto;
 
-    padding: 75px 24px;
+    padding: 55px 24px;
 }
 
 .section-header {
@@ -292,7 +292,7 @@ video {
 .directory-section {
     background-color: #f6f7f9;
 
-    padding: 60px 24px;
+    padding: 50px 24px;
 }
 
 .directory-container {
@@ -337,7 +337,7 @@ video {
 
     gap: 28px;
 
-    padding: 20px 0;
+    padding: 15px 0;
 
     border-top: 1px solid #dfe3e8;
 }
@@ -501,18 +501,18 @@ a.directory-item p {
 }
 
 .project-detail-inner {
-    max-width: 1000px;
+    max-width: 1100px;
 
     margin: 0 auto;
 
-    padding: 75px 24px;
+    padding: 55px 24px;
 }
 
 
 /* ==================== Project Title ==================== */
 
 .project-title-area {
-    margin-bottom: 34px;
+    margin-bottom: 24px;
 }
 
 .project-index {
@@ -559,7 +559,7 @@ a.directory-item p {
 
     aspect-ratio: 16 / 9;
 
-    margin: 0 auto 40px;
+    margin: 0 auto 28px;
 
     overflow: hidden;
 
@@ -600,7 +600,7 @@ a.directory-item p {
 
     aspect-ratio: 16 / 9;
 
-    margin: 0 auto 40px;
+    margin: 0 auto 28px;
 
     display: flex;
     flex-direction: column;
@@ -645,9 +645,9 @@ a.directory-item p {
     grid-template-columns:
         repeat(2, minmax(0, 1fr));
 
-    gap: 50px;
+    gap: 40px;
 
-    margin-bottom: 30px;
+    margin-bottom: 22px;
 }
 
 .project-info-block h3 {
@@ -686,7 +686,7 @@ a.directory-item p {
 
     gap: 9px;
 
-    padding-top: 23px;
+    padding-top: 16px;
 
     border-top: 1px solid #e5e7eb;
 }
