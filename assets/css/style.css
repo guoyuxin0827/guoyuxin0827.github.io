@@ -646,6 +646,9 @@ a.directory-item p {
    Project Information
    ========================================================= */
 
+
+/* Background + Main Work container */
+
 .project-info-grid {
 
     display: block;
@@ -653,47 +656,86 @@ a.directory-item p {
     margin-bottom: 14px;
 }
 
-.project-info-block h3 {
 
-    margin: 0 0 6px;
-
-    font-size: 18px;
-
-    line-height: 1.2;
-
-    color: #20242a;
-}
+/* Each block */
 
 .project-info-block {
 
-    margin-bottom: 18px;
+    margin-bottom: 20px;
+
+    color: #555f6d;
+
+    font-size: 16px;
+
+    line-height: 1.55;
 }
+
 
 .project-info-block:last-child {
 
     margin-bottom: 0;
 }
 
+
+/* Titles */
+
+.project-info-block h3 {
+
+    margin: 0 0 8px;
+
+    font-size: 18px;
+
+    font-weight: 700;
+
+    line-height: 1.2;
+
+    color: #20242a;
+}
+
+
+/* Paragraph */
+
 .project-info-block p {
+
     margin: 0;
 
-    line-height: 1.45;
-
     color: #555f6d;
+
+    font-size: 16px;
+
+    line-height: 1.55;
 }
+
+
+/* List */
 
 .project-info-block ul {
+
     margin: 0;
 
-    padding-left: 18px;
+    padding-left: 22px;
 
-    line-height: 1.45;
+    color: #555f6d;
+
+    font-size: 16px;
+
+    line-height: 1.55;
+}
+
+
+.project-info-block li {
+
+    margin-bottom: 6px;
+
+    padding-left: 2px;
 
     color: #555f6d;
 }
 
-.project-info-block li {
-    margin-bottom: 2px;
+
+.project-info-block li:last-child {
+
+    margin-bottom: 0;
 }
 
 
