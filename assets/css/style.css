@@ -483,8 +483,8 @@ a.directory-item p {
 }
 
 .project-list-header {
-    padding-top: 30px;
-    padding-bottom: 10px;
+    padding-top: 24px;
+    padding-bottom: 6px;
 }
 
 
@@ -510,7 +510,7 @@ a.directory-item p {
 
     margin: 0 auto;
 
-    padding: 34px 24px;
+    padding: 12px 24px;
 }
 
 
@@ -784,7 +784,7 @@ a.directory-item p {
    ========================================================= */
 
 footer {
-    padding: 24px 24px;
+    padding: 24px;
 
     text-align: center;
 
@@ -862,7 +862,6 @@ footer p {
 
     .hero h1 {
         font-size: 42px;
-
         line-height: 1.2;
     }
 
@@ -913,9 +912,14 @@ footer p {
 
     /* Projects */
 
+    .project-list-header {
+        padding-top: 20px;
+        padding-bottom: 5px;
+    }
+
     .project-detail-inner {
-        padding-top: 30px;
-        padding-bottom: 30px;
+        padding-top: 14px;
+        padding-bottom: 14px;
     }
 
     .project-title-area h2 {
