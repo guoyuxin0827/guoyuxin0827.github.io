@@ -898,11 +898,9 @@ a.directory-item:hover {
 
     margin: 0;
 
+    padding-left: 0;
 
-    padding-left: 20px;
-
-
-    list-style-position: outside;
+    list-style-position: inside;
 }
 
 
