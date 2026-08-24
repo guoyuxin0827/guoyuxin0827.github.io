@@ -217,95 +217,93 @@ video {
 }
 
 
-/* ==================== Project Directory ==================== */
+/* ==================== Compact Project Directory ==================== */
 
-.project-category {
-    margin-bottom: 60px;
+.directory-section {
+    padding-top: 70px;
+    padding-bottom: 60px;
 }
 
-.category-title {
-    margin-bottom: 20px;
-
-    font-size: 19px;
-
-    color: #374151;
+.compact-header {
+    margin-bottom: 28px;
 }
 
-.directory-grid {
+.directory-category {
+    margin-bottom: 30px;
+}
+
+.directory-category h3 {
+    margin: 0 0 12px;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    color: #4b5563;
+}
+
+.compact-directory-grid {
     display: grid;
 
     grid-template-columns:
         repeat(2, minmax(0, 1fr));
 
-    gap: 22px;
+    gap: 12px;
 }
 
-.single-card-grid {
-    grid-template-columns:
-        minmax(0, 1fr) minmax(0, 1fr);
-}
+.compact-directory-card {
+    min-height: 90px;
 
-.directory-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 16px 18px;
+
     text-decoration: none;
     color: inherit;
-}
-
-.directory-card {
-    position: relative;
-
-    min-height: 215px;
-
-    padding: 28px;
 
     background-color: white;
 
-    border-radius: 14px;
-
     border: 1px solid #e5e7eb;
-
-    box-shadow:
-        0 5px 18px rgba(0, 0, 0, 0.04);
+    border-radius: 10px;
 
     transition:
         transform 0.2s ease,
-        box-shadow 0.2s ease;
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
 }
 
-.directory-card:hover {
-    transform: translateY(-5px);
+.compact-directory-card:hover {
+    transform: translateY(-2px);
+
+    border-color: #cfd4dc;
 
     box-shadow:
-        0 12px 30px rgba(0, 0, 0, 0.09);
+        0 6px 16px rgba(0, 0, 0, 0.06);
 }
 
-.card-number {
-    display: block;
+.compact-directory-card h4 {
+    margin: 0 0 3px;
 
-    margin-bottom: 34px;
-
-    font-size: 12px;
-    color: #9ca3af;
+    font-size: 16px;
+    font-weight: 650;
 }
 
-.directory-card h4 {
-    margin: 0 0 9px;
+.compact-directory-card p {
+    margin: 0;
 
-    font-size: 21px;
-}
-
-.directory-card p {
-    margin: 0 0 24px;
+    font-size: 13px;
 
     color: #6b7280;
 }
 
-.view-project {
-    font-size: 14px;
-    font-weight: 600;
+.compact-directory-card > span {
+    margin-left: 15px;
 
-    color: #374151;
+    font-size: 20px;
+
+    color: #9ca3af;
 }
-
 
 /* ==================== Project Detail ==================== */
 
