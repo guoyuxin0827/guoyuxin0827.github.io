@@ -422,7 +422,7 @@
                     </p>
 
                     <h2>
-                        基于主动推理的强化学习无人机吊装控制
+                        基于主动推理的强化学习无人机吊装控制（researching）
                     </h2>
 
                     <p class="project-summary">
@@ -505,17 +505,17 @@
                     </p>
 
                     <h2>
-                        Manipulator Project I
+                        面向低精度传感器的高精度电机控制
                     </h2>
 
                     <p class="project-summary">
-                        Add a short description of your first manipulator project here.
+                        在强噪声、强扰动、摩擦存在的情况下，实现电机转速的高精度控制。
                     </p>
 
                 </div>
 
 
-                <div class="video-placeholder">
+                <!-- <div class="video-placeholder">
 
                     <p>
                         Project Video
@@ -525,31 +525,43 @@
                         Add your video here later
                     </span>
 
-                </div>
+                </div> -->
 
 
                 <div class="project-info-grid">
 
                     <div class="project-info-block">
 
-                        <h3>Background</h3>
+                        <h3>项目背景</h3>
 
-                        <p>
-                            Introduce the problem, application scenario and
-                            motivation of this project.
-                        </p>
+                        <ul>
+                            <li>为降低高精度电机控制系统成本，采用低精度角度传感器替代高精度编码器，需要在有限测量精度条件下实现电机角度高精度跟踪。</li>
+                            <li>电机角度测量信号中包含高斯白噪声和多频周期噪声：
+                                [
+                                n(t)=n_{random}(t)+A_1\sin(2\pi f_1t+\phi_1)+A_2\sin(2\pi f_2t+\phi_2)+A_3\sin(2\pi f_3t+\phi_3)
+                                ]
+                                导致角度反馈信号产生偏差，降低闭环跟踪精度。</li>
+                            <li>电机运行过程中受到负载扰动力矩影响，扰动由不同频率的正弦力矩扰动组成：
+                                [
+                                T_d(t)=B_1\sin(2\pi f_{d1}t+\phi_{d1})+B_2\sin(2\pi f_{d2}t+\phi_{d2})
+                                ]
+                                使实际电机输出角度偏离期望轨迹，造成跟踪误差。</li>
+                            <li>电机机械系统存在非线性 LuGre 摩擦，包括静摩擦、库仑摩擦、Stribeck 效应和黏性摩擦，导致低速运动过程中出现非线性误差，影响角度跟踪性能。</li>
+                            <li>控制系统中存在采样、计算和执行过程引起的时延，使控制输入不能及时作用于电机状态，降低系统响应速度并影响闭环稳定性。</li>
+                        </ul>
 
                     </div>
 
 
                     <div class="project-info-block">
 
-                        <h3>Main Work</h3>
+                        <h3>主要工作</h3>
 
                         <ul>
-                            <li>Add your first contribution.</li>
-                            <li>Add your second contribution.</li>
-                            <li>Add your third contribution.</li>
+                            <li>建立考虑非线性摩擦的电机机械模型，引入 LuGre 摩擦模型描述静摩擦、库仑摩擦、Stribeck 效应和黏性摩擦对角度跟踪性能的影响。</li>
+                            <li>针对电机运行过程中的多源不确定性，基于内部模型原理建立扰动与噪声增广模型，分别描述多频负载扰动、参数失配引起的集总扰动以及多频测量噪声。</li>
+                            <li>构建包含电机状态、摩擦状态、扰动状态和噪声状态的增广状态空间模型，设计基于扩展卡尔曼滤波（EKF）的复合状态观测器，实现状态、扰动和噪声的联合估计。</li>
+                            <li>利用估计得到的扰动与摩擦信息进行补偿控制，在噪声、扰动、非线性摩擦和控制时延条件下提高电机角度跟踪精度和抗扰性能，并通过仿真实验验证算法有效性。</li>
                         </ul>
 
                     </div>
