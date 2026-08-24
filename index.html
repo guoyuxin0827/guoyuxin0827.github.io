@@ -165,7 +165,7 @@
     
                     <a href="#arm-project-1" class="directory-item">
                         <div>
-                            <h4>冗余度机械臂无模型运动控制DRNN-SMC算法</h4>
+                            <h4>⭐冗余度机械臂无模型运动控制DRNN-SMC算法</h4>
                             <p>ZNN · GNN · SMC · 雅可比矩阵估计</p>
                         </div>
     
@@ -175,7 +175,7 @@
     
                     <a href="#arm-project-2" class="directory-item">
                         <div>
-                            <h4>冗余度机械臂无模型运动控制DZNN-QN算法</h4>
+                            <h4>⭐冗余度机械臂无模型运动控制DZNN-QN算法</h4>
                             <p>ZNN · QN · 雅可比矩阵估计</p>
                         </div>
     
@@ -199,7 +199,7 @@
     
                     <a href="#uav-rotary" class="directory-item">
                         <div>
-                            <h4>基于视觉感知的无人机自主导航与控制</h4>
+                            <h4>⭐基于视觉感知的无人机自主导航与控制</h4>
                             <p>四旋翼 · A* · minimum snap · PD控制器</p>
                         </div>
     
@@ -286,7 +286,7 @@
 
             <div class="section-header">
                 <p class="section-label">SELECTED WORK</p>
-                <h2>Projects</h2>
+                <h2>项目详情</h2>
             </div>
 
         </div>
@@ -300,16 +300,15 @@
                 <div class="project-title-area">
 
                     <p class="project-index">
-                        Crane Systems / 01
+                        吊装系统 / 01
                     </p>
 
                     <h2>
-                        Active Inference LQR Crane Control
+                        基于主动推理的桥式吊车防摇控制器<
                     </h2>
 
                     <p class="project-summary">
-                        Anti-sway and positioning control for crane systems based
-                        on active inference and optimal control.
+                        将主动推理控制与LQR控制思路结合，实现桥式吊车的快速防摇定位控制。
                     </p>
 
                 </div>
@@ -334,12 +333,12 @@
 
                     <div class="project-info-block">
 
-                        <h3>Background</h3>
+                        <h3>项目背景</h3>
 
                         <p>
-                            Crane systems are underactuated and strongly coupled.
-                            Payload oscillation can reduce transportation efficiency
-                            and make accurate positioning difficult.
+                            <li>吊机是典型的欠驱动系统，驱动装置的移动会同时引起驱动装置位移和摆角变化。提高吊车的防摇精度和防摇效率对工业场景有重要意义。</li>
+                            <li>LQR控制能够实现快速定位，但在控制早期其大误差与高增益会导致大的控制量，造成大摆角，不符合吊机安全工作需求。</li>
+                            <li>主动推理控制（AIC）具有……优点，但是连续AIC主要使用梯度下降的方式最小化自由能，导致控制效果收敛慢。</li>
                         </p>
 
                     </div>
@@ -347,13 +346,12 @@
 
                     <div class="project-info-block">
 
-                        <h3>Main Work</h3>
+                        <h3>主要工作</h3>
 
                         <ul>
-                            <li>Established the dynamic model of the crane system.</li>
-                            <li>Designed an active inference based control framework.</li>
-                            <li>Integrated LQR into the controller design.</li>
-                            <li>Evaluated positioning and anti-sway performance.</li>
+                            <li>使用拉格朗日建模方法，建立欠驱动吊装系统非线性模型。</li>
+                            <li>重新设计广义状态变量，推导自由能，将自由能控制信念相关项近似为LQR代价形式。</li>
+                            <li>使用Riccati方程求解最佳控制量，实现自由能的快速收敛。</li>
                         </ul>
 
                     </div>
