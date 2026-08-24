@@ -23,7 +23,7 @@ body {
     background-color: #f6f7f9;
     color: #20242a;
 
-    line-height: 1.65;
+    line-height: 1.55;
 }
 
 a {
@@ -46,7 +46,6 @@ video {
     z-index: 1000;
 
     background-color: rgba(255, 255, 255, 0.96);
-
     border-bottom: 1px solid #e5e7eb;
 }
 
@@ -97,7 +96,7 @@ video {
     background-color: #111827;
     color: white;
 
-    padding: 45px 0;
+    padding: 40px 0;
 }
 
 .hero-content {
@@ -111,18 +110,15 @@ video {
     align-items: center;
     justify-content: space-between;
 
-    gap: 55px;
+    gap: 50px;
 }
-
-
-/* 左侧 */
 
 .hero-text {
     flex: 1;
 }
 
 .hero-subtitle {
-    margin: 0 0 7px;
+    margin: 0 0 6px;
 
     text-transform: uppercase;
     letter-spacing: 3px;
@@ -138,34 +134,34 @@ video {
 
     font-size: clamp(42px, 6vw, 60px);
 
-    line-height: 1.05;
+    line-height: 1.2;
     letter-spacing: -2px;
 }
 
 .hero-description {
     max-width: 650px;
 
-    margin: 16px 0 24px;
+    margin: 12px 0 20px;
 
-    font-size: 18px;
+    font-size: 17px;
 
     color: #d1d5db;
 }
 
 
-/* Hero buttons */
+/* Hero Buttons */
 
 .hero-buttons {
     display: flex;
     flex-wrap: wrap;
 
-    gap: 12px;
+    gap: 10px;
 }
 
 .button {
     display: inline-block;
 
-    padding: 10px 18px;
+    padding: 9px 17px;
 
     border-radius: 8px;
 
@@ -190,7 +186,6 @@ video {
 
 .secondary-button {
     border: 1px solid #4b5563;
-
     color: white;
 }
 
@@ -199,7 +194,7 @@ video {
 }
 
 
-/* Hero photo */
+/* Hero Photo */
 
 .hero-photo {
     width: 130px;
@@ -236,15 +231,16 @@ video {
     max-width: 1100px;
 
     margin: 0 auto;
-    padding: 48px 24px;
+
+    padding: 42px 24px;
 }
 
 .section-header {
-    margin-bottom: 26px;
+    margin-bottom: 18px;
 }
 
 .section-label {
-    margin: 0 0 6px;
+    margin: 0 0 5px;
 
     font-size: 12px;
     font-weight: 700;
@@ -258,7 +254,7 @@ video {
 .section-header h2 {
     margin: 0;
 
-    font-size: 35px;
+    font-size: 34px;
 
     line-height: 1.2;
     letter-spacing: -1px;
@@ -267,7 +263,7 @@ video {
 .section-description {
     max-width: 650px;
 
-    margin: 9px 0 0;
+    margin: 7px 0 0;
 
     color: #6b7280;
 }
@@ -283,6 +279,7 @@ video {
     margin: 0;
 
     font-size: 17px;
+    line-height: 1.55;
 
     color: #4b5563;
 }
@@ -295,7 +292,7 @@ video {
 .directory-section {
     background-color: #f6f7f9;
 
-    padding: 42px 0;
+    padding: 38px 0;
 }
 
 .directory-container {
@@ -306,28 +303,25 @@ video {
     padding: 0 24px;
 }
 
-
-/* Directory Header */
-
 .directory-header {
-    margin-bottom: 24px;
+    margin-bottom: 18px;
 }
 
 .directory-header .section-label {
-    margin-bottom: 6px;
+    margin-bottom: 5px;
 }
 
 .directory-header h2 {
     margin: 0;
 
-    font-size: 35px;
+    font-size: 34px;
 
     line-height: 1.2;
     letter-spacing: -1px;
 }
 
 .directory-header > p:last-child {
-    margin: 8px 0 0;
+    margin: 6px 0 0;
 
     color: #6b7280;
 
@@ -335,31 +329,31 @@ video {
 }
 
 
-/* 每一行分类 */
+/* Directory Row */
 
 .directory-row {
     display: grid;
 
     grid-template-columns: 190px 1fr;
 
-    gap: 28px;
+    gap: 26px;
 
-    padding: 13px 0;
+    padding: 11px 0;
 
     border-top: 1px solid #dfe3e8;
 }
 
 
-/* 分类标题 */
+/* Directory Category */
 
 .directory-category-title {
     display: flex;
 
     align-items: flex-start;
 
-    gap: 12px;
+    gap: 11px;
 
-    padding-top: 3px;
+    padding-top: 2px;
 }
 
 .directory-category-title span {
@@ -377,13 +371,13 @@ video {
     font-size: 16px;
     font-weight: 650;
 
-    line-height: 1.4;
+    line-height: 1.2;
 
     color: #20242a;
 }
 
 
-/* 右侧目录卡片 */
+/* Directory Projects */
 
 .directory-projects {
     display: grid;
@@ -391,7 +385,7 @@ video {
     grid-template-columns:
         repeat(2, minmax(0, 1fr));
 
-    gap: 10px;
+    gap: 9px;
 }
 
 a.directory-item {
@@ -400,9 +394,9 @@ a.directory-item {
     align-items: center;
     justify-content: space-between;
 
-    min-height: 70px;
+    min-height: 66px;
 
-    padding: 11px 15px;
+    padding: 10px 14px;
 
     background-color: white;
 
@@ -442,7 +436,7 @@ a.directory-item h4 {
     font-size: 15px;
     font-weight: 650;
 
-    line-height: 1.35;
+    line-height: 1.2;
 
     color: #20242a;
 }
@@ -452,7 +446,7 @@ a.directory-item p {
 
     font-size: 12px;
 
-    line-height: 1.4;
+    line-height: 1.35;
 
     color: #7a828e;
 }
@@ -469,23 +463,22 @@ a.directory-item p {
 
 
 /* =========================================================
-   Projects
+   Projects Section
    ========================================================= */
 
 .projects-section {
     background-color: white;
 }
 
-
-/* Projects 标题 */
-
 .project-list-header {
-    padding-top: 42px;
-    padding-bottom: 16px;
+    padding-top: 36px;
+    padding-bottom: 12px;
 }
 
 
-/* 单个 Project */
+/* =========================================================
+   Single Project
+   ========================================================= */
 
 .project-detail {
     scroll-margin-top: 80px;
@@ -504,7 +497,8 @@ a.directory-item p {
     max-width: 1100px;
 
     margin: 0 auto;
-    padding: 48px 24px;
+
+    padding: 42px 24px;
 }
 
 
@@ -513,16 +507,15 @@ a.directory-item p {
    ========================================================= */
 
 .project-title-area {
-    margin-bottom: 22px;
+    margin-bottom: 16px;
 }
 
 .project-index {
-    margin: 0 0 7px;
+    margin: 0 0 5px;
 
     font-size: 12px;
 
     letter-spacing: 1px;
-
     text-transform: uppercase;
 
     color: #6b7280;
@@ -531,12 +524,11 @@ a.directory-item p {
 .project-title-area h2 {
     max-width: 850px;
 
-    margin: 0 0 12px;
+    margin: 0 0 8px;
 
-    font-size: 36px;
+    font-size: 34px;
 
     line-height: 1.2;
-
     letter-spacing: -1px;
 }
 
@@ -545,7 +537,8 @@ a.directory-item p {
 
     margin: 0;
 
-    font-size: 17px;
+    font-size: 16px;
+    line-height: 1.5;
 
     color: #6b7280;
 }
@@ -560,7 +553,7 @@ a.directory-item p {
 
     aspect-ratio: 16 / 9;
 
-    margin: 0 0 26px;
+    margin: 0 0 22px;
 
     overflow: hidden;
 
@@ -582,7 +575,7 @@ a.directory-item p {
 }
 
 
-/* 图片模式 */
+/* Image Placeholder */
 
 .video-container .project-image {
     width: 100%;
@@ -594,14 +587,14 @@ a.directory-item p {
 }
 
 
-/* 暂无视频 */
+/* No Video Placeholder */
 
 .video-placeholder {
     width: 100%;
 
     aspect-ratio: 16 / 9;
 
-    margin: 0 0 26px;
+    margin: 0 0 22px;
 
     display: flex;
     flex-direction: column;
@@ -620,14 +613,16 @@ a.directory-item p {
 .video-placeholder p {
     margin: 0;
 
-    font-size: 20px;
+    font-size: 19px;
     font-weight: 600;
+
+    line-height: 1.2;
 
     color: #374151;
 }
 
 .video-placeholder span {
-    margin-top: 4px;
+    margin-top: 3px;
 
     font-size: 14px;
 
@@ -645,15 +640,17 @@ a.directory-item p {
     grid-template-columns:
         repeat(2, minmax(0, 1fr));
 
-    gap: 42px;
+    gap: 36px;
 
-    margin-bottom: 20px;
+    margin-bottom: 16px;
 }
 
 .project-info-block h3 {
-    margin: 0 0 8px;
+    margin: 0 0 6px;
 
     font-size: 17px;
+
+    line-height: 1.2;
 
     color: #20242a;
 }
@@ -661,19 +658,23 @@ a.directory-item p {
 .project-info-block p {
     margin: 0;
 
+    line-height: 1.5;
+
     color: #555f6d;
 }
 
 .project-info-block ul {
     margin: 0;
 
-    padding-left: 19px;
+    padding-left: 18px;
+
+    line-height: 1.5;
 
     color: #555f6d;
 }
 
 .project-info-block li {
-    margin-bottom: 4px;
+    margin-bottom: 3px;
 }
 
 
@@ -686,15 +687,15 @@ a.directory-item p {
 
     flex-wrap: wrap;
 
-    gap: 8px;
+    gap: 7px;
 
-    padding-top: 15px;
+    padding-top: 12px;
 
     border-top: 1px solid #e5e7eb;
 }
 
 .tech-stack span {
-    padding: 5px 11px;
+    padding: 5px 10px;
 
     border-radius: 999px;
 
@@ -716,11 +717,11 @@ a.directory-item p {
     grid-template-columns:
         repeat(2, minmax(0, 1fr));
 
-    gap: 16px;
+    gap: 14px;
 }
 
 .skill-card {
-    padding: 20px;
+    padding: 18px;
 
     background-color: white;
 
@@ -729,13 +730,17 @@ a.directory-item p {
 }
 
 .skill-card h3 {
-    margin: 0 0 6px;
+    margin: 0 0 5px;
 
     font-size: 17px;
+
+    line-height: 1.2;
 }
 
 .skill-card p {
     margin: 0;
+
+    line-height: 1.45;
 
     color: #6b7280;
 }
@@ -746,9 +751,11 @@ a.directory-item p {
    ========================================================= */
 
 .contact-section p {
-    margin: 7px 0;
+    margin: 5px 0;
 
     font-size: 16px;
+
+    line-height: 1.45;
 }
 
 .contact-section a {
@@ -765,7 +772,7 @@ a.directory-item p {
    ========================================================= */
 
 footer {
-    padding: 28px 24px;
+    padding: 26px 24px;
 
     text-align: center;
 
@@ -798,8 +805,6 @@ footer p {
 
 @media (max-width: 800px) {
 
-    /* Navigation */
-
     .nav-container {
         flex-direction: column;
 
@@ -818,7 +823,7 @@ footer p {
     /* Hero */
 
     .hero {
-        padding: 38px 0;
+        padding: 34px 0;
     }
 
     .hero-content {
@@ -826,7 +831,7 @@ footer p {
 
         align-items: flex-start;
 
-        gap: 24px;
+        gap: 20px;
     }
 
     .hero-photo {
@@ -843,6 +848,7 @@ footer p {
 
     .hero h1 {
         font-size: 42px;
+        line-height: 1.2;
     }
 
     .hero-description {
@@ -850,26 +856,26 @@ footer p {
     }
 
 
-    /* Section */
+    /* General */
 
     .section {
-        padding-top: 42px;
-        padding-bottom: 42px;
+        padding-top: 36px;
+        padding-bottom: 36px;
     }
 
 
     /* Directory */
 
     .directory-section {
-        padding: 38px 0;
+        padding: 34px 0;
     }
 
     .directory-row {
         grid-template-columns: 1fr;
 
-        gap: 10px;
+        gap: 9px;
 
-        padding: 14px 0;
+        padding: 12px 0;
     }
 
     .directory-category-title {
@@ -881,21 +887,22 @@ footer p {
     }
 
 
-    /* Project */
+    /* Projects */
 
     .project-detail-inner {
-        padding-top: 42px;
-        padding-bottom: 42px;
+        padding-top: 36px;
+        padding-bottom: 36px;
     }
 
     .project-title-area h2 {
-        font-size: 31px;
+        font-size: 30px;
+        line-height: 1.2;
     }
 
     .project-info-grid {
         grid-template-columns: 1fr;
 
-        gap: 24px;
+        gap: 20px;
     }
 
 
@@ -925,12 +932,13 @@ footer p {
 
 
     .hero {
-        padding-top: 34px;
-        padding-bottom: 34px;
+        padding-top: 30px;
+        padding-bottom: 30px;
     }
 
     .hero h1 {
-        font-size: 40px;
+        font-size: 39px;
+        line-height: 1.2;
     }
 
     .hero-description {
@@ -959,12 +967,14 @@ footer p {
     .section h2,
     .section-header h2,
     .directory-header h2 {
-        font-size: 29px;
+        font-size: 28px;
+        line-height: 1.2;
     }
 
 
     .project-title-area h2 {
         font-size: 27px;
+        line-height: 1.2;
     }
 
     .project-summary {
