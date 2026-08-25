@@ -1417,6 +1417,61 @@ footer p {
 
 
 /* =========================================================
+   Two Video Layout
+   ========================================================= */
+
+.project-video-grid {
+
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 16px;
+
+    margin-bottom: 24px;
+
+}
+
+
+.project-video-grid figure {
+
+    margin: 0;
+
+}
+
+
+.project-video-grid video {
+
+    width: 100%;
+
+    aspect-ratio: 16 / 9;
+
+    object-fit: cover;
+
+    border-radius: 12px;
+
+    border: 1px solid #e5e7eb;
+
+    background-color: #000;
+
+}
+
+
+.project-video-grid figcaption {
+
+    margin-top: 8px;
+
+    text-align: center;
+
+    font-size: 13px;
+
+    color: #64748b;
+
+}
+
+/* =========================================================
    Small Mobile
    ========================================================= */
 
@@ -1515,6 +1570,17 @@ footer p {
 @media (max-width: 800px) {
 
     .project-image-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+
+@media (max-width: 800px) {
+
+    .project-video-grid {
 
         grid-template-columns: 1fr;
 
