@@ -906,22 +906,21 @@
                 <div class="project-title-area">
 
                     <p class="project-index">
-                        UAV / 02
+                        无人机 / 02
                     </p>
 
                     <h2>
-                        Fixed-Wing UAV
+                        固定翼无人机轨迹规划及轨迹跟踪
                     </h2>
 
                     <p class="project-summary">
-                        Fixed-wing aircraft modeling, performance analysis
-                        and flight-control related work.
+                        根据项目需求，完成轨迹规划、避障、轨迹跟踪任务。
                     </p>
 
                 </div>
 
 
-                <div class="video-placeholder">
+                <!-- <div class="video-placeholder">
 
                     <p>
                         Project Video
@@ -931,31 +930,48 @@
                         Add your video here later
                     </span>
 
-                </div>
+                </div> -->
 
 
                 <div class="project-info-grid">
 
                     <div class="project-info-block">
 
-                        <h3>Background</h3>
+                        <h3>背景信息</h3>
 
-                        <p>
-                            This project focuses on modeling and analysis of
-                            fixed-wing aircraft dynamics and flight performance.
-                        </p>
+                        <ul>
+                            <li>固定翼无人机无法悬停、转弯半径有限，通常采用固定滚转角（固定转弯半径）的方式进行转向。</li>
+                            <li>在无人机集群中，无人机之间通信成本高，因此采用约定时间到达集结点的方式集结无人机，因此各无人机需要自行规划轨迹，使得自身在约定时间到达约定集结点。</li>
+                            <li>无人机需要在规划轨迹完成障碍区绕行，</li>
+                        </ul>
 
                     </div>
 
 
                     <div class="project-info-block">
 
-                        <h3>Main Work</h3>
+                        <h3>主要工作</h3>
 
                         <ul>
-                            <li>Established the aircraft mathematical model.</li>
-                            <li>Analyzed aerodynamic and flight performance.</li>
-                            <li>Conducted control and simulation analysis.</li>
+                            <li>针对提前已知障碍区情况，提前规划dubins曲线绕行障碍区。</li>
+                            <li>针对固定航线飞行的已知障碍区绕行情况，使用比例导引算法完成避障。</li>
+                            <li>针对无人机实时避障情况，使用人工势场法完成无人机间的避障。</li>
+                            <li>针对固定时间集结问题，设计S弯规划算法，规划无人机轨迹，以较高效率完成避障。</li>
+                            <li>针对侧偏距纠正问题，使用高低频分开的横向跟踪：偏航角跟踪高频侧偏指令，滚转角跟踪低频侧偏指令。</li>
+                        </ul>
+
+                    </div>
+
+                    <div class="project-info-block">
+
+                        <h3>专利</h3>
+
+                        <ul>
+                            <li>
+                                <a href="https://ss.zhizhen.com/detail_38502727e7500f26c6a285559e41e79b6c311ff35514ef211921b0a3ea255101c944b624736f9e8510772abaed2074bde18a552ccd5d3073f18f5ab46ae018148037858d9dd15a16927a335823b99c8b?&apistrclassfy=1_6_1" target="_blank">
+                                    IEEE TIE | Paper Title: A Novel Model-Free DZNN-QN Algorithm for Redundant Manipulator Control
+                                </a>
+                            </li>
                         </ul>
 
                     </div>
@@ -965,9 +981,10 @@
 
                 <div class="tech-stack">
 
-                    <span>MATLAB</span>
-                    <span>Flight Dynamics</span>
-                    <span>Aircraft Modeling</span>
+                    <span>Simulink</span>
+                    <span>dubins曲线</span>
+                    <span>比例导引算法</span>
+                    <span>ADRC</span>
 
                 </div>
 
