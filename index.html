@@ -1170,47 +1170,55 @@
                     </h2>
 
                     <p class="project-summary">
-                        使用IC卡作为控制指令驱动小车运动。
+                        SIT项目，使用IC卡作为控制指令驱动小车运动。
                     </p>
 
                 </div>
 
 
-                <!-- <div class="video-placeholder">
-
-                    <p>
-                        Project Video
-                    </p>
-
-                    <span>
-                        Add your video here later
-                    </span>
-
-                </div> -->
+                <div class="project-media-grid">
+                
+                    <figure>
+                        <video controls>
+                            <source src="assets/videos/ICcar.mp4" type="video/mp4">
+                        </video>
+                        <figcaption>
+                            真机运行效果
+                        </figcaption>
+                    </figure>
+                
+                
+                    <figure>
+                        <img src="assets/images/ICcar.png" alt="result">
+                        <figcaption>
+                            小车结构图
+                        </figcaption>
+                    </figure>
+                
+                </div>
 
 
                 <div class="project-info-grid">
 
                     <div class="project-info-block">
 
-                        <h3>Background</h3>
+                        <h3>项目背景</h3>
 
-                        <p>
-                            Introduce the embedded vehicle platform,
-                            application scenario and project objective here.
-                        </p>
+                        <ul>
+                            <li>设计模块化编程小车，用于启迪儿童思维。</li>
+                        </ul>
 
                     </div>
 
 
                     <div class="project-info-block">
 
-                        <h3>Main Work</h3>
+                        <h3>主要工作</h3>
 
                         <ul>
-                            <li>Designed embedded control software.</li>
-                            <li>Integrated sensors and actuators.</li>
-                            <li>Implemented vehicle motion control.</li>
+                            <li>设计小车结构，根据小车功能需求，进行硬件选型。</li>
+                            <li>使用STM32C8T6单片机和RC522射频读写器完成对IC卡指令的读取，并控制小车运动。</li>
+                            <li>使用PID控制器控制电机转速，完成运动控制。</li>
                         </ul>
 
                     </div>
@@ -1221,9 +1229,8 @@
                 <div class="tech-stack">
 
                     <span>C</span>
-                    <span>C++</span>
-                    <span>Embedded Systems</span>
-                    <span>Control</span>
+                    <span>STM32</span>
+                    <span>RC522</span>
 
                 </div>
 
@@ -1239,36 +1246,36 @@
 
         <div class="section-header">
             <p class="section-label">TECHNOLOGY</p>
-            <h2>Skills</h2>
+            <h2>技能栈</h2>
         </div>
 
         <div class="skills-grid">
 
             <div class="skill-card">
-                <h3>Programming</h3>
+                <h3>控制算法</h3>
                 <p>
-                    C · C++ · Python · MATLAB
+                    LQR · MPC · SMC · PID · ADRC ·AIC
                 </p>
             </div>
 
             <div class="skill-card">
-                <h3>Robotics</h3>
+                <h3>强化学习</h3>
                 <p>
-                    ROS · Gazebo · Robot Modeling · Motion Control
+                    SAC · Dreamer · World Model
                 </p>
             </div>
 
             <div class="skill-card">
-                <h3>Control</h3>
+                <h3>规划算法</h3>
                 <p>
-                    LQR · MPC · Active Inference · State Estimation
+                    A* · Dijkstra · RRT · PRM · AP
                 </p>
             </div>
 
             <div class="skill-card">
-                <h3>Learning</h3>
+                <h3>工具语言</h3>
                 <p>
-                    PyTorch · Reinforcement Learning · Actor-Critic · SAC
+                    Python · C++ · MATLAB · ROS2
                 </p>
             </div>
 
@@ -1282,20 +1289,20 @@
 
         <div class="section-header">
             <p class="section-label">CONTACT</p>
-            <h2>Get in Touch</h2>
+            <h2>联系方式</h2>
         </div>
 
-        <p>
+        <!-- <p>
             GitHub:
             <a href="https://github.com/YOUR_USERNAME"
                target="_blank">
                 github.com/YOUR_USERNAME
             </a>
-        </p>
+        </p> -->
 
         <p>
             Email:
-            your_email@example.com
+            yxguo0827@seu.edu.cn
         </p>
 
     </section>
