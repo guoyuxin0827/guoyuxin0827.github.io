@@ -263,15 +263,6 @@
 
                     <a href="#embedded-car-3" class="directory-item">
                         <div>
-                            <h4>MSP432循迹小车</h4>
-                            <p>MSP432 · 光电传感器 · 迷宫循迹</p>
-                        </div>
-    
-                        <span class="directory-arrow">→</span>
-                    </a>
-
-                    <a href="#embedded-car-4" class="directory-item">
-                        <div>
                             <h4>STM32模块化编程小车</h4>
                             <p>STM32C8T6 · RC522 · PID控制</p>
                         </div>
@@ -1016,31 +1007,32 @@
                 <div class="project-title-area">
 
                     <p class="project-index">
-                        Embedded Vehicle / 01
+                        嵌入式 | 小车 / 01
                     </p>
 
                     <h2>
-                        Embedded Autonomous Vehicle
+                        智能车竞赛
                     </h2>
 
                     <p class="project-summary">
-                        Embedded system development for sensing,
-                        vehicle control and autonomous operation.
+                        第十七届百度智能汽车竞赛“智慧交通组”国赛二等奖。
                     </p>
 
                 </div>
 
 
-                <div class="video-placeholder">
-
-                    <p>
-                        Project Video
-                    </p>
-
-                    <span>
-                        Add your video here later
-                    </span>
-
+                <div class="video-container">
+                
+                    <figure>
+                        <video controls>
+                            <source src="assets/videos/IntelligentCar.mp4" type="video/mp4">
+                        </video>
+                
+                        <figcaption>
+                            智能车比赛视频
+                        </figcaption>
+                    </figure>
+                
                 </div>
 
 
@@ -1048,24 +1040,28 @@
 
                     <div class="project-info-block">
 
-                        <h3>Background</h3>
+                        <h3>项目背景</h3>
 
-                        <p>
-                            Introduce the embedded vehicle platform,
-                            application scenario and project objective here.
-                        </p>
+                        <ul>
+                            <li>百度智慧交通组要求智能车利用视觉感知和深度学习方法完成地图循迹、标识识别等任务，需要在有限计算资源条件下实现实时图像处理与任务执行。</li>
+                            <li>智能车运行过程中需要根据摄像头采集的道路和环境信息完成目标识别与路径判断，而复杂场景下的光照变化、视角变化等因素会影响视觉模型识别准确率。</li>
+                            <li>比赛平台采用百度 EdgeBoard 边缘计算设备，计算资源有限，需要完成深度学习模型训练、优化和部署，使模型能够满足实际运行需求。</li>
+                            <li>针对地图循迹、标识识别和任务点执行等不同任务，需要分别构建数据集并训练视觉模型，实现从图像输入到车辆控制指令输出的映射。</li>
+                        </ul>
 
                     </div>
 
 
                     <div class="project-info-block">
 
-                        <h3>Main Work</h3>
+                        <h3>主要工作</h3>
 
                         <ul>
-                            <li>Designed embedded control software.</li>
-                            <li>Integrated sensors and actuators.</li>
-                            <li>Implemented vehicle motion control.</li>
+                            <li>搭建智能车实验平台，完成百度 EdgeBoard 开发板、麦克纳姆轮底盘、摄像头、电机和舵机等硬件模块集成，实现图像采集与车辆控制通信。</li>
+                            <li>针对地图循迹任务，采集遥控小车行驶过程中的图像数据，并根据车辆转向角建立训练数据集，训练深度学习模型学习视觉信息与转向控制量之间的映射关系，实现基于视觉的循迹控制。</li>
+                            <li>针对标识识别任务，对采集图像进行数据标注和预处理，训练目标识别模型，实现交通标志和任务目标的视觉识别。</li>
+                            <li>针对不同任务点要求，采集对应场景数据并进行模型训练，使智能车能够根据视觉输入完成指定任务。</li>
+                            <li>设计机械夹爪，控制舵机实现物块抓取。</li>
                         </ul>
 
                     </div>
@@ -1075,10 +1071,8 @@
 
                 <div class="tech-stack">
 
-                    <span>C</span>
-                    <span>C++</span>
-                    <span>Embedded Systems</span>
-                    <span>Control</span>
+                    <span>Python</span>
+                    <span>深度学习</span>
 
                 </div>
 
@@ -1093,16 +1087,15 @@
                 <div class="project-title-area">
 
                     <p class="project-index">
-                        Embedded Vehicle / 01
+                        嵌入式 | 小车 / 02
                     </p>
 
                     <h2>
-                        Embedded Autonomous Vehicle
+                        钟控系统
                     </h2>
 
                     <p class="project-summary">
-                        Embedded system development for sensing,
-                        vehicle control and autonomous operation.
+                        使用MSP432和DS1302实现钟控系统。
                     </p>
 
                 </div>
@@ -1136,24 +1129,12 @@
 
                     <div class="project-info-block">
 
-                        <h3>Background</h3>
-
-                        <p>
-                            Introduce the embedded vehicle platform,
-                            application scenario and project objective here.
-                        </p>
-
-                    </div>
-
-
-                    <div class="project-info-block">
-
-                        <h3>Main Work</h3>
+                        <h3>主要工作</h3>
 
                         <ul>
-                            <li>Designed embedded control software.</li>
-                            <li>Integrated sensors and actuators.</li>
-                            <li>Implemented vehicle motion control.</li>
+                            <li>利用取字模工具，使用阴阳模设计界面，完成界面显示。</li>
+                            <li>使用Timer32异步计时器，设置晶振频率、分频数和单次循环次数，确定中断周期，实现计时。</li>
+                            <li>使用蓝牙收发功能，实现两台设备的通信，完成设备自动对时功能。</li>
                         </ul>
 
                     </div>
@@ -1164,9 +1145,9 @@
                 <div class="tech-stack">
 
                     <span>C</span>
-                    <span>C++</span>
-                    <span>Embedded Systems</span>
-                    <span>Control</span>
+                    <span>MSP432</span>
+                    <span>DS1302</span>
+                    <span>SPI</span>
 
                 </div>
 
@@ -1181,22 +1162,21 @@
                 <div class="project-title-area">
 
                     <p class="project-index">
-                        Embedded Vehicle / 01
+                        嵌入式 | 小车 / 03
                     </p>
 
                     <h2>
-                        Embedded Autonomous Vehicle
+                        STM32模块化编程小车
                     </h2>
 
                     <p class="project-summary">
-                        Embedded system development for sensing,
-                        vehicle control and autonomous operation.
+                        使用IC卡作为控制指令驱动小车运动。
                     </p>
 
                 </div>
 
 
-                <div class="video-placeholder">
+                <!-- <div class="video-placeholder">
 
                     <p>
                         Project Video
@@ -1206,84 +1186,7 @@
                         Add your video here later
                     </span>
 
-                </div>
-
-
-                <div class="project-info-grid">
-
-                    <div class="project-info-block">
-
-                        <h3>Background</h3>
-
-                        <p>
-                            Introduce the embedded vehicle platform,
-                            application scenario and project objective here.
-                        </p>
-
-                    </div>
-
-
-                    <div class="project-info-block">
-
-                        <h3>Main Work</h3>
-
-                        <ul>
-                            <li>Designed embedded control software.</li>
-                            <li>Integrated sensors and actuators.</li>
-                            <li>Implemented vehicle motion control.</li>
-                        </ul>
-
-                    </div>
-
-                </div>
-
-
-                <div class="tech-stack">
-
-                    <span>C</span>
-                    <span>C++</span>
-                    <span>Embedded Systems</span>
-                    <span>Control</span>
-
-                </div>
-
-            </div>
-
-        </article>
-
-        <article id="embedded-car-4" class="project-detail">
-
-            <div class="project-detail-inner">
-
-                <div class="project-title-area">
-
-                    <p class="project-index">
-                        Embedded Vehicle / 01
-                    </p>
-
-                    <h2>
-                        Embedded Autonomous Vehicle
-                    </h2>
-
-                    <p class="project-summary">
-                        Embedded system development for sensing,
-                        vehicle control and autonomous operation.
-                    </p>
-
-                </div>
-
-
-                <div class="video-placeholder">
-
-                    <p>
-                        Project Video
-                    </p>
-
-                    <span>
-                        Add your video here later
-                    </span>
-
-                </div>
+                </div> -->
 
 
                 <div class="project-info-grid">
