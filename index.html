@@ -326,18 +326,25 @@
                 </div>
 
 
-                <div class="video-container">
-
-                    <video controls preload="metadata"
-                           poster="assets/images/crane.png">
-
-                        <source src="assets/videos/crane.mp4"
-                                type="video/mp4">
-
-                        <!-- Your browser does not support the video tag. -->
-
-                    </video>
-
+                <div class="project-media-grid">
+                
+                    <figure>
+                        <video controls>
+                            <source src="assets/videos/crane.mp4" type="video/mp4">
+                        </video>
+                        <figcaption>
+                            Gazebo仿真
+                        </figcaption>
+                    </figure>
+                
+                
+                    <figure>
+                        <img src="assets/images/AIC-LQR.png" alt="result">
+                        <figcaption>
+                            MATLAB仿真
+                        </figcaption>
+                    </figure>
+                
                 </div>
 
 
@@ -810,22 +817,21 @@
                 <div class="project-title-area">
 
                     <p class="project-index">
-                        UAV / 01
+                        无人机 / 01
                     </p>
 
                     <h2>
-                        Rotary-Wing UAV
+                        基于视觉感知的无人机自主导航与控制
                     </h2>
 
                     <p class="project-summary">
-                        Modeling, control, trajectory planning and autonomous
-                        operation for multirotor UAV systems.
+                        旋翼无人机视觉感知、建图、选取航路点、轨迹优化、轨迹跟踪全流程。
                     </p>
 
                 </div>
 
 
-                <div class="video-placeholder">
+                <!-- <div class="video-placeholder">
 
                     <p>
                         Project Video
@@ -835,31 +841,30 @@
                         Add your video here later
                     </span>
 
-                </div>
+                </div> -->
 
 
                 <div class="project-info-grid">
 
                     <div class="project-info-block">
 
-                        <h3>Background</h3>
-
-                        <p>
-                            This project focuses on autonomous multirotor UAV
-                            modeling, control and trajectory planning.
-                        </p>
-
-                    </div>
-
-
-                    <div class="project-info-block">
-
-                        <h3>Main Work</h3>
+                        <h3>主要工作</h3>
 
                         <ul>
-                            <li>Established the UAV dynamic model.</li>
-                            <li>Designed trajectory planning and control algorithms.</li>
-                            <li>Conducted simulation and performance evaluation.</li>
+                            <li>搭建无人机自主导航实验平台，集成飞控、电子调速器、NUC 机载计算平台、单目摄像机和深度摄像机等硬件模块，完成传感器数据采集、飞控通信和算法部署，实现无人机感知、规划与控制闭环。</li>
+                            <li>基于牛顿-欧拉法建立无人机动力学模型，描述无人机位置、速度、姿态和角速度之间的运动关系，为轨迹规划和控制算法提供动力学约束：
+                                $$m\ddot{p}=Rf+mg$$
+                                $$I\dot{\omega}+\omega\times I\omega=\tau$$
+                                其中 $p$ 为无人机位置，$R$ 为姿态旋转矩阵，$f$ 为推力，$\tau$ 为控制力矩。</li>
+                            <li>基于单目视觉与深度摄像机进行环境感知，通过相机标定获取内参矩阵和畸变参数，对图像进行去畸变处理；利用 SIFT 特征提取与描述子匹配，通过特征点几何约束估计相机运动状态，并结合深度信息恢复空间点位置，实现无人机位姿估计。</li>
+                            <li>根据深度摄像机获取的环境信息构建局部栅格地图，为无人机自主导航提供环境表示，并通过传感器反馈实现地图实时更新。</li>
+                            <li>基于 A* 算法进行路径规划，通过代价函数：
+                                $$f(n)=g(n)+h(n)$$
+                                其中 $g(n)$ 表示起点到当前节点的累计代价，$h(n)$ 表示当前节点到目标节点的启发式距离，搜索满足避障约束的最优航路点。</li>
+                            <li>针对 A* 生成路径存在离散、不连续以及不满足无人机运动约束的问题，采用 minimum snap 方法进行轨迹优化，通过最小化高阶导数代价：
+                                $$J=\int_0^T ||p^{(4)}(t)||^2dt$$
+                                生成连续、平滑且满足动力学约束的飞行轨迹，提高轨迹可执行性和飞行稳定性。</li>
+                            <li>设计无人机轨迹跟踪控制模块，将规划得到的位置轨迹转换为期望姿态和控制指令，通过 PD 控制器实现位置与姿态跟踪，完成从视觉感知、地图构建、路径规划、轨迹生成到控制执行的完整自主导航流程。</li>
                         </ul>
 
                     </div>
@@ -871,8 +876,9 @@
 
                     <span>MATLAB</span>
                     <span>Python</span>
-                    <span>UAV</span>
+                    <span>A*</span>
                     <span>Trajectory Planning</span>
+                    <span>PD控制器</span>
 
                 </div>
 
